@@ -24,6 +24,12 @@ def hello_name(name):
 def crop_layout():
     return render_template('base.html')
 
+
+@app.route('/crop')
+def crop_layout2():
+    return render_template('base2.html')
+
+
 #
 # # @app.route('/croppr/croppr.js')
 # # def send_js():

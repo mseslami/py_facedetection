@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img id="croppr"
+     src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr">
+
+<script src="/static/to/js/jquery.min.js"></script>
+<script src="/static/to/js/jquery.Jcrop.min.js"></script>
+<link rel="stylesheet" href="/static/to/css/jquery.Jcrop.css" type="text/css"/>
+<script></script>
+<script></script>
+<script language="Javascript">
+
+  function showCoords(c)
+  {
+      // variables can be accessed here as
+      // c.x, c.y, c.x2, c.y2, c.w, c.h
+      console.log( c.x, c.y, c.x2, c.y2, c.w, c.h);
+  };
+
+
+</script>
+<script language="Javascript">
+    jQuery(function($) {
+        $('#croppr').Jcrop({
+            onSelect: showCoords,
+            bgColor:     'black',
+            bgOpacity:   .4,
+            setSelect:   [ 100, 100, 950, 650 ],
+        });
+    });
+
+
+
+</script>
+</body>
+</html>
