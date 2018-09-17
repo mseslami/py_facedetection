@@ -10,6 +10,7 @@ from project import users_blueprint
 # app = Flask(__name__, static_folder='static')
 app = Flask(__name__)
 
+
 @app.route('/hi/<user>')
 def hi_name(user):
     return render_template('base.html', name=user)
@@ -27,7 +28,7 @@ def crop_layout():
 
 @app.route('/crop')
 def crop_layout2():
-    return render_template('base2.html')
+    return render_template('base2.html')  # ,value=a
 
 
 #
