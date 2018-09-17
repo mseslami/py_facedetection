@@ -41,7 +41,7 @@ def crop_layout2():
 @app.route('/_get_post_json/', methods=['POST'])
 def get_post_json():
     data = request.get_json()
-    print(data["hi"])
+    print("ourdata is :",data["hi"])
 
 
     import urllib

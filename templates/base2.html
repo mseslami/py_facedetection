@@ -22,6 +22,7 @@
   };
 
 
+
 </script>
 <script language="Javascript">
     jQuery(function($) {
@@ -35,9 +36,8 @@
 
 
 
+
 </script>
-
-
 
 
 <!--webcam access-->
@@ -78,14 +78,13 @@
 
 
 
+
 </script>
 
 
 <a href="javascript:void(take_snapshot())">Take Snapshot</a>
 
 <!--adding existing file:-->
-<!--<button onclick="document.getElementById('file-input').click();">Open</button>-->
-<!--<input id="file-input" type="file" name="name"  />-->
 <script>
   var openFile = function(file) {
     var input = file.target;
@@ -95,21 +94,51 @@
       var dataURL = reader.result;
       var output = document.getElementById('output');
       output.src = dataURL;
+
+
+
+
+
+
+       $.ajax({
+    type: "POST",
+    url: "{{ url_for("get_post_json") }}",
+    contentType: "application/json",
+    data: JSON.stringify({hello: "world", hi : dataURL}),
+    dataType: "json",
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(err) {
+        console.log(err);
+    }
+});
+
+
     };
     reader.readAsDataURL(input.files[0]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
-  </script>
+
+</script>
 <input type='file' accept='image/*' onchange='openFile(event)'><br>
 <img id='output' style="height:100px; width=100px">
 
 
-
-
-<!--download image:-->
 <script></script>
-<script>
-
-</script>
 
 </body>
 </html>

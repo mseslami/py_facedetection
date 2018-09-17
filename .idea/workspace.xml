@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="">
+    <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="openening exitsting img is added.&#10;sends an img.uri from js to py and saves it :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
@@ -27,7 +27,7 @@
         <counts>
           <entry key="css" value="7" />
           <entry key="html" value="11" />
-          <entry key="jpg" value="2" />
+          <entry key="jpg" value="3" />
           <entry key="js" value="12" />
           <entry key="py" value="9" />
         </counts>
@@ -36,43 +36,43 @@
         <counts>
           <entry key="CSS" value="7" />
           <entry key="HTML" value="11" />
-          <entry key="Image" value="2" />
+          <entry key="Image" value="3" />
           <entry key="JavaScript" value="12" />
           <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="902" />
+          <entry key="html" value="1035" />
           <entry key="js" value="16" />
-          <entry key="py" value="764" />
-          <entry key="txt" value="128" />
+          <entry key="py" value="797" />
+          <entry key="txt" value="238" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="902" />
+          <entry key="HTML" value="1035" />
           <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="128" />
-          <entry key="Python" value="764" />
+          <entry key="PLAIN_TEXT" value="238" />
+          <entry key="Python" value="797" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="106">
+              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#526#528#0" />
-                <marker date="1537166487959" expanded="true" signature="529:2060" ph="..." />
-                <marker date="1537166487959" expanded="true" signature="1407:1414" ph="..." />
-                <marker date="1537166487959" expanded="true" signature="1722:1729" ph="..." />
-                <marker date="1537166487959" expanded="true" signature="1805:1812" ph="..." />
+                <marker date="1537167719384" expanded="true" signature="529:2094" ph="..." />
+                <marker date="1537167719384" expanded="true" signature="1441:1448" ph="..." />
+                <marker date="1537167719384" expanded="true" signature="1756:1763" ph="..." />
+                <marker date="1537167719384" expanded="true" signature="1839:1846" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,11 +83,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="61" column="55" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+            <state relative-caret-position="166">
+              <caret line="108" column="54" selection-start-line="108" selection-start-column="54" selection-end-line="108" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/project/apiclient.py" />
         <option value="$PROJECT_DIR$/static/webcam/webcam.js" />
-        <option value="$PROJECT_DIR$/templates/base2.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/base2.html" />
       </list>
     </option>
   </component>
@@ -338,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537159009970</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="openening exitsting img is added.&#10;sends an img.uri from js to py and saves it :)">
+      <created>1537166571773</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537166571773</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -354,12 +361,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17946708" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17946708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3282313" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29761904" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29761904" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,7 +387,8 @@
     <MESSAGE value="second cropper ( which can be initialized) is added to http://127.0.0.1:5000/crop.&#10;it's link:&#10;http://deepliquid.com/content/Jcrop_Manual.html#Getting_Started" />
     <MESSAGE value="before adding webcam access" />
     <MESSAGE value="camera is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="camera is added" />
+    <MESSAGE value="openening exitsting img is added.&#10;sends an img.uri from js to py and saves it :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="openening exitsting img is added.&#10;sends an img.uri from js to py and saves it :)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/project/templates/base.html" />
@@ -516,31 +524,31 @@
     <entry file="file://$PROJECT_DIR$/pic1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="61" column="55" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file01.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="106">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#526#528#0" />
-            <marker date="1537166487959" expanded="true" signature="529:2060" ph="..." />
-            <marker date="1537166487959" expanded="true" signature="1407:1414" ph="..." />
-            <marker date="1537166487959" expanded="true" signature="1722:1729" ph="..." />
-            <marker date="1537166487959" expanded="true" signature="1805:1812" ph="..." />
+            <marker date="1537167719384" expanded="true" signature="529:2094" ph="..." />
+            <marker date="1537167719384" expanded="true" signature="1441:1448" ph="..." />
+            <marker date="1537167719384" expanded="true" signature="1756:1763" ph="..." />
+            <marker date="1537167719384" expanded="true" signature="1839:1846" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="108" column="54" selection-start-line="108" selection-start-column="54" selection-end-line="108" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
