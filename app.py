@@ -1,6 +1,7 @@
 import os
 
 import flask
+# from django.contrib.sites import requests
 from flask import request, send_from_directory, send_file
 from flask import Flask, render_template
 from werkzeug.debug import console
@@ -28,8 +29,28 @@ def crop_layout():
 
 @app.route('/crop')
 def crop_layout2():
+    # if request.method == 'POST':
+    #     print("ssssssssssssssssssssssssssss")
+    #     print(request.request.form.get('json_data', None))
+        # the_json = request.request.form.get('json_data', None)
+        # this template simply prints it out and all that I get is b"
+        # return render_template('base2.html', the_json=the_json)
     return render_template('base2.html')  # ,value=a
 
+
+@app.route('/_get_post_json/', methods=['POST'])
+def get_post_json():
+    data = request.get_json()
+    print(data["hi"])
+
+
+    import urllib
+    resource = urllib.request.urlopen(data["hi"])
+    output = open("file01.jpg", "wb")
+    output.write(resource.read())
+    output.close()
+
+    return flask.jsonify(status="success", data=data)
 
 #
 # # @app.route('/croppr/croppr.js')

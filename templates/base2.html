@@ -53,11 +53,63 @@
     function take_snapshot() {
         Webcam.snap( function(data_uri) {
             document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+
+
+         $.ajax({
+    type: "POST",
+    url: "{{ url_for("get_post_json") }}",
+    contentType: "application/json",
+    data: JSON.stringify({hello: "world", hi : data_uri}),
+    dataType: "json",
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(err) {
+        console.log(err);
+    }
+});
+
         } );
     }
+
+
+
+
+
+
+
 </script>
 
+
 <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+
+<!--adding existing file:-->
+<!--<button onclick="document.getElementById('file-input').click();">Open</button>-->
+<!--<input id="file-input" type="file" name="name"  />-->
+<script>
+  var openFile = function(file) {
+    var input = file.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('output');
+      output.src = dataURL;
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+  </script>
+<input type='file' accept='image/*' onchange='openFile(event)'><br>
+<img id='output' style="height:100px; width=100px">
+
+
+
+
+<!--download image:-->
+<script></script>
+<script>
+
+</script>
 
 </body>
 </html>
