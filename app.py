@@ -2,10 +2,11 @@ import os
 
 import flask
 # from django.contrib.sites import requests
-from flask import request, send_from_directory, send_file
+from flask import request, send_from_directory, send_file, Response, json
 from flask import Flask, render_template
 from werkzeug.debug import console
 
+from apiclient import post_To_Detect
 from project import users_blueprint
 
 # app = Flask(__name__, static_folder='static')
@@ -32,17 +33,21 @@ def crop_layout2():
     # if request.method == 'POST':
     #     print("ssssssssssssssssssssssssssss")
     #     print(request.request.form.get('json_data', None))
-        # the_json = request.request.form.get('json_data', None)
-        # this template simply prints it out and all that I get is b"
-        # return render_template('base2.html', the_json=the_json)
-    return render_template('base2.html')  # ,value=a
+    # the_json = request.request.form.get('json_data', None)
+    # this template simply prints it out and all that I get is b"
+    # return render_template('base2.html', the_json=the_json)
+    out = {"a": "b", "c": "d"}
+
+    return render_template('base2.html', value=out)  # ,value=a
 
 
-@app.route('/_get_post_json/', methods=['POST'])
+@app.route('/_get_post_json/', methods=['POST', 'GET'])
 def get_post_json():
-    data = request.get_json()
-    print("ourdata is :",data["hi"])
+    # if request.method == "POST":
 
+    print(staticmethod, "method is sssssssssssss")
+    data = request.get_json()
+    print("ourdata is :", data["hi"])
 
     import urllib
     resource = urllib.request.urlopen(data["hi"])
@@ -52,23 +57,13 @@ def get_post_json():
 
     return flask.jsonify(status="success", data=data)
 
-#
-# # @app.route('/croppr/croppr.js')
-# # def send_js():
-#     # return send_from_directory( '/croppr',"croppr.js")
-#     # return  app.send_static_file('/croppr/croppr.js')
-#     # return send_file(os.path.join('/croppr', "croppr.js" ), as_attachment=True)
-#     # return send_from_directory("/croppr/croppr.js")
-#
-#
-# @app.route('/<path:path>')
-# def static_file(path):
-#     # ET http://127.0.0.1:5000/static/croppr.js net::ERR_ABORTED 404 (NOT FOUND)
-#     # return app.send_static_file(path)
-#     # return flask.redirect(flask.url_for('static', filename='croppr.js'), code=301)
-#     # console.log(app.static_folder)
-#     # console.log(path)
-#     return send_from_directory(app.static_folder, path)
+
+@app.route('/getmethodyy')
+def report():
+    out = [130, 120, 700, 420]
+    out = post_To_Detect()
+    # return Response('this is a sample response')
+    return json.dumps(out)
 
 
 if __name__ == '__main__':
