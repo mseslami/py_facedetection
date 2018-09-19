@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<img id="croppr"
+<img id="croppr" style="width:320px; height:240px;"
      src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr">
 <!--image cropper-->
 <!--http://deepliquid.com/content/Jcrop_Manual.html#Getting_Started-->
@@ -67,7 +67,8 @@ $.get("/getmethodyy", function(data) {
 
     function take_snapshot() {
         Webcam.snap( function(data_uri) {
-            document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+            <!--document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';-->
+            document.getElementById('croppr').src= data_uri;
 
 
          $.ajax({
@@ -107,7 +108,7 @@ $.get("/getmethodyy", function(data) {
     var reader = new FileReader();
     reader.onload = function(){
       var dataURL = reader.result;
-      var output = document.getElementById('output');
+      var output = document.getElementById('croppr');
       output.src = dataURL;
 
 
@@ -139,13 +140,10 @@ $.get("/getmethodyy", function(data) {
 
 </script>
 <input type='file' accept='image/*' onchange='openFile(event)'><br>
-<img id='output' style="height:100px; width=100px">
 
 
 <script></script>
 <script>
 </script>
-<h1>ریحانه</h1>
-<h2>ریحانه</h2>
 </body>
 </html>
