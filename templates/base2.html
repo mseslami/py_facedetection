@@ -31,9 +31,10 @@
     </div>
     <div id="imageview2" align="center" style="width:640px; height:400px; background:#FF9938;   position: absolute; ">
         <img id="croppr" align="center"
-             style="width:640px; height:400px; background:#00FF99AA; ">
+             style=" background:#00FF99AA; ">
     </div>
-      <div id="croppView"  align="center" style="width:640px; height:400px; position: absolute;   background:#000000; "></div>
+    <div id="croppView" align="center"
+         style="width:640px; height:400px; position: absolute; visibility:hidden;   background-color:transparent; "></div>
 
 </div>
 
@@ -56,6 +57,8 @@
 
 
 
+
+
 </script>
 
 
@@ -75,7 +78,8 @@ $.get("/getmethodyy", function(data) {
 
 
     jQuery(function($) {
-        $('#croppView').Jcrop({
+        <!--croppView-->
+        $('#croppr').Jcrop({
             onSelect: showCoords,
             bgColor:     'black',
             bgOpacity:   .4,
@@ -89,6 +93,8 @@ $.get("/getmethodyy", function(data) {
 
 
 }
+
+
 
 
 
@@ -125,6 +131,8 @@ $.get("/getmethodyy", function(data) {
 
         } );
     }
+
+
 
 
 
@@ -182,6 +190,8 @@ $.get("/getmethodyy", function(data) {
 
 
 
+
+
 </script>
 <!--<script>-->
 <!--&lt;!&ndash;switch visibility&ndash;&gt;-->
@@ -199,12 +209,17 @@ $.get("/getmethodyy", function(data) {
     function hidegallery(){
     document.getElementById("imageview2").style.visibility = "visible";
     document.getElementById("imageview").style.visibility = "hidden";
+    document.getElementById("croppView").style.visibility = "hidden";
 }
 
     function hidecamera(){
     document.getElementById("imageview2").style.visibility = "hidden";
     document.getElementById("imageview").style.visibility = "visible";
+    document.getElementById("croppView").style.visibility = "hidden";
+
 }
+
+
 
 
 

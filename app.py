@@ -51,7 +51,7 @@ def get_post_json():
 
     import urllib
     resource = urllib.request.urlopen(data["hi"])
-    output = open("file01.jpg", "wb")
+    output = open("userimage.jpg", "wb")
     output.write(resource.read())
     output.close()
 

@@ -40,7 +40,7 @@ def get_One_Face():
 def post_To_Detect():
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/project/new2.png')
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -65,7 +65,14 @@ def post_To_Detect():
     # b = list(sendphoto.text)
     # content = (sendphoto.content)
     from ast import literal_eval
+
     content = literal_eval(sendphoto.text)
+    for item in content:
+        print("changeing item indexes", item)
+        item[0], item[3] = item[3], item[0]
+        item[1], item[3] = item[3], item[1]
+        item[2], item[3] = item[3], item[2]
+        print(item)
     return content
 
 
@@ -81,7 +88,7 @@ def array_To_Image(cols):
 if __name__ == '__main__':
     # post_To_Detect()
     from ast import literal_eval
+
     a = "[[0, 129, 125, 10]]"
     a = literal_eval(a)
     print(((a)[0][2]))
-
