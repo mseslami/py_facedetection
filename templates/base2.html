@@ -6,8 +6,40 @@
 </head>
 <body>
 
-<img id="croppr" style="width:320px; height:240px;"
-     src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr">
+
+<div align="center" aria-orientation="horizontal">
+
+    <div class="image-upload">
+        <label for="file-input">
+            <img src="/static/icons/gallery.png" style="width:100px; height:100px;" onclick="hidegallery()"/>
+        </label>
+
+        <input id="file-input" type='file' accept='image/*' style="display: none;" onchange='openFile(event)'>
+
+        <img src="/static/icons/camera.png" style="width:100px; height:100px;" onclick='hidecamera()'>
+    </div>
+</div>
+
+
+<div align="center" style="width:640px; height:400px; position: relative;">
+    <div id="imageview" align="center"
+         style="width:640px; height:400px; background:#FF9900;   position: absolute;">
+        <div id="cameraShow" style="width:160px; height:100px; background-color:transparent; position: absolute;"></div>
+        <img id="cameraPhoto"
+             style="width:640px; height:400px; background:#00779900; ">
+
+    </div>
+    <div id="imageview2" align="center" style="width:640px; height:400px; background:#FF9938;   position: absolute; ">
+        <img id="croppr" align="center"
+             style="width:640px; height:400px; background:#00FF99AA; ">
+    </div>
+      <div id="croppView"  align="center" style="width:640px; height:400px; position: absolute;   background:#000000; "></div>
+
+</div>
+
+
+<div><h1 onclick="callCropper()">send to database</h1></div>
+
 <!--image cropper-->
 <!--http://deepliquid.com/content/Jcrop_Manual.html#Getting_Started-->
 <script src="/static/to/js/jquery.min.js"></script>
@@ -29,6 +61,11 @@
 
 <script language="Javascript">
 
+function callCropper(){
+    document.getElementById("croppView").style.visibility = "visible";
+
+
+
 console.log("photo is being created")
 var indexes;
 $.get("/getmethodyy", function(data) {
@@ -38,7 +75,7 @@ $.get("/getmethodyy", function(data) {
 
 
     jQuery(function($) {
-        $('#croppr').Jcrop({
+        $('#croppView').Jcrop({
             onSelect: showCoords,
             bgColor:     'black',
             bgOpacity:   .4,
@@ -51,6 +88,9 @@ $.get("/getmethodyy", function(data) {
 })
 
 
+}
+
+
 
 </script>
 
@@ -59,16 +99,14 @@ $.get("/getmethodyy", function(data) {
 <!--https://github.com/jhuckaby/webcamjs-->
 <script src="/static/webcam/webcam.js"></script>
 
-<div id="my_camera" style="width:320px; height:240px;"></div>
-<div id="my_result"></div>
+<!--<div id="my_camera" style="width:320px; height:240px;"></div>-->
 
 <script language="JavaScript">
-    Webcam.attach( '#my_camera' );
+    Webcam.attach( '#cameraShow' );
 
     function take_snapshot() {
         Webcam.snap( function(data_uri) {
-            <!--document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';-->
-            document.getElementById('croppr').src= data_uri;
+            document.getElementById('cameraPhoto').src= data_uri;
 
 
          $.ajax({
@@ -87,7 +125,6 @@ $.get("/getmethodyy", function(data) {
 
         } );
     }
-
 
 
 
@@ -138,12 +175,41 @@ $.get("/getmethodyy", function(data) {
 
   };
 
+
+
+
+
+
+
+
 </script>
-<input type='file' accept='image/*' onchange='openFile(event)'><br>
+<!--<script>-->
+<!--&lt;!&ndash;switch visibility&ndash;&gt;-->
+<!--function toggleDisplay() {-->
+<!--var mainFrameOne = document.getElementById("imageview");-->
+<!--var mainFrameTwo = document.getElementById("imageview2");-->
 
-
-<script></script>
+<!--mainFrameOne.style.display = (-->
+<!--mainFrameOne.style.display == "none" ? "block" : "none");-->
+<!--mainFrameTwo.style.display = (-->
+<!--mainFrameTwo.style.display == "none" ? "block" : "none");-->
+<!--}-->
+<!--</script>-->
 <script>
+    function hidegallery(){
+    document.getElementById("imageview2").style.visibility = "visible";
+    document.getElementById("imageview").style.visibility = "hidden";
+}
+
+    function hidecamera(){
+    document.getElementById("imageview2").style.visibility = "hidden";
+    document.getElementById("imageview").style.visibility = "visible";
+}
+
+
+
 </script>
+
 </body>
 </html>
+
