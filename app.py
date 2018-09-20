@@ -6,7 +6,7 @@ from flask import request, send_from_directory, send_file, Response, json
 from flask import Flask, render_template
 from werkzeug.debug import console
 
-from apiclient import post_To_Detect
+from apiclient import post_To_Detect, post_To_Recognize
 from project import users_blueprint
 
 # app = Flask(__name__, static_folder='static')
@@ -64,6 +64,13 @@ def report():
     out = post_To_Detect()
     # return Response('this is a sample response')
     return json.dumps(out)
+
+
+@app.route('/getmethodrecognize')
+def recognize():
+    out = post_To_Recognize()
+    return json.dumps(out)
+
 
 
 if __name__ == '__main__':

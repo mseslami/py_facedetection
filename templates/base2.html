@@ -34,12 +34,14 @@
              style=" background:#00FF99AA; ">
     </div>
     <div id="croppView" align="center"
-         style="width:640px; height:400px; position: absolute; visibility:hidden;   background-color:transparent; "></div>
+         style="width:640px; height:400px; position: absolute; visibility:hidden;   background-color:transparent;
+            z-index: -1"></div>
 
 </div>
 
 
 <div><h1 onclick="callCropper()">send to database</h1></div>
+<div><h1 onclick="detect()">send to detect</h1></div>
 
 <!--image cropper-->
 <!--http://deepliquid.com/content/Jcrop_Manual.html#Getting_Started-->
@@ -54,10 +56,6 @@
   {
         console.log( c.x, c.y, c.x2, c.y2, c.w, c.h);
   };
-
-
-
-
 
 </script>
 
@@ -95,18 +93,12 @@ $.get("/getmethodyy", function(data) {
 }
 
 
-
-
-
 </script>
 
 
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
 <script src="/static/webcam/webcam.js"></script>
-
-<!--<div id="my_camera" style="width:320px; height:240px;"></div>-->
-
 <script language="JavaScript">
     Webcam.attach( '#cameraShow' );
 
@@ -133,13 +125,6 @@ $.get("/getmethodyy", function(data) {
     }
 
 
-
-
-
-
-
-
-
 </script>
 
 
@@ -155,9 +140,6 @@ $.get("/getmethodyy", function(data) {
       var dataURL = reader.result;
       var output = document.getElementById('croppr');
       output.src = dataURL;
-
-
-
 
 
 
@@ -182,14 +164,6 @@ $.get("/getmethodyy", function(data) {
 
 
   };
-
-
-
-
-
-
-
-
 
 
 </script>
@@ -223,8 +197,31 @@ $.get("/getmethodyy", function(data) {
 
 
 
-</script>
 
+</script>
+<script> function detect(){
+}
+
+
+
+console.log("photo is being send to recognize")
+var indexes;
+$.get("/getmethodrecognize", function(data) {
+    indexes = $.parseJSON(data)
+    console.log(indexes)
+
+$("#recognizeList").append("<ul></ul>");
+for(var i in indexes) {
+    var li = "<li>";
+    $("ul").append(li.concat(indexes[i]))
+}
+
+    });
+
+
+
+</script>
+<div id="recognizeList"></div>
 </body>
 </html>
 

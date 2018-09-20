@@ -17,51 +17,53 @@
     <session id="141554919">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="7" />
+          <entry key="css" value="9" />
+          <entry key="gif" value="1" />
           <entry key="html" value="14" />
-          <entry key="jpg" value="12" />
-          <entry key="js" value="19" />
+          <entry key="jpg" value="13" />
+          <entry key="js" value="21" />
           <entry key="png" value="9" />
-          <entry key="py" value="16" />
+          <entry key="py" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="7" />
+          <entry key="CSS" value="9" />
           <entry key="HTML" value="14" />
-          <entry key="Image" value="21" />
-          <entry key="JavaScript" value="19" />
-          <entry key="Python" value="16" />
+          <entry key="Image" value="23" />
+          <entry key="JavaScript" value="21" />
+          <entry key="Python" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2863" />
+          <entry key="html" value="2962" />
           <entry key="js" value="16" />
-          <entry key="py" value="2060" />
-          <entry key="txt" value="587" />
+          <entry key="py" value="2163" />
+          <entry key="txt" value="616" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2863" />
+          <entry key="HTML" value="2962" />
           <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="587" />
-          <entry key="Python" value="2060" />
+          <entry key="PLAIN_TEXT" value="616" />
+          <entry key="Python" value="2163" />
         </counts>
       </usages-collector>
     </session>
@@ -71,37 +73,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+            <state relative-caret-position="280">
+              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1537367924752" expanded="true" signature="582:1727" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apiclient.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1537370106305" expanded="true" signature="162:163" ph="..." />
-                <marker date="1537370106305" expanded="true" signature="430:431" ph="..." />
-                <marker date="1537370106305" expanded="true" signature="944:2024" ph="..." />
-                <marker date="1537370106305" expanded="true" signature="2050:2282" ph="..." />
+                <marker date="1537416842314" expanded="true" signature="601:1857" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apiclient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1537416842374" expanded="true" signature="162:163" ph="..." />
+                <marker date="1537416842374" expanded="true" signature="430:431" ph="..." />
+                <marker date="1537416842374" expanded="true" signature="944:2024" ph="..." />
+                <marker date="1537416842374" expanded="true" signature="2050:2833" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-345">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="250">
+              <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -128,7 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>//</find>
       <find>oncropstart\\\\\</find>
       <find>onupdate</find>
       <find>maxsize</find>
@@ -150,13 +151,15 @@
       <find>from f</find>
       <find>hello</find>
       <find>request</find>
-      <find>getmethod</find>
       <find>camera</find>
       <find>display</find>
       <find>gallery</find>
       <find>button</find>
       <find>ssss</find>
       <find>get_post_json</find>
+      <find>file</find>
+      <find>data</find>
+      <find>getmethod</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,9 +183,9 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/webcam/webcam.js" />
         <option value="$PROJECT_DIR$/project/apiclient.py" />
+        <option value="$PROJECT_DIR$/apiclient.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/base2.html" />
-        <option value="$PROJECT_DIR$/apiclient.py" />
       </list>
     </option>
   </component>
@@ -198,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,6 +228,19 @@
               <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="to" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="to" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="webcam" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,6 +252,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537366247912</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="crops totally correct!">
+      <created>1537370215216</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537370215216</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -406,7 +429,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13793103" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16144201" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -437,20 +460,26 @@
     <MESSAGE value="gets array of indexes and create a crop view by given value" />
     <MESSAGE value="image from camera or gallery set on one &lt;img" />
     <MESSAGE value="view improved. three &lt;div in one position:&#10;imageview contains camera, imageview2 contane gallery, croppview for croplayout after request's response" />
-    <option name="LAST_COMMIT_MESSAGE" value="view improved. three &lt;div in one position:&#10;imageview contains camera, imageview2 contane gallery, croppview for croplayout after request's response" />
+    <MESSAGE value="crops totally correct!" />
+    <option name="LAST_COMMIT_MESSAGE" value="crops totally correct!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apiclient.py</url>
-          <line>75</line>
+          <line>105</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apiclient.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="3" />
+          <line>106</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -519,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="1686" column="27" selection-start-line="1686" selection-start-column="27" selection-end-line="1686" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -535,11 +557,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/to/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.color.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -576,24 +593,59 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/file01.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/to/css/jquery.Jcrop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2170" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/css/jquery.Jcrop.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/css/Jcrop.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1655" column="21" selection-start-line="1655" selection-start-column="21" selection-end-line="1655" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.color.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/userimage.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/apiclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1537416842374" expanded="true" signature="162:163" ph="..." />
+            <marker date="1537416842374" expanded="true" signature="430:431" ph="..." />
+            <marker date="1537416842374" expanded="true" signature="944:2024" ph="..." />
+            <marker date="1537416842374" expanded="true" signature="2050:2833" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        <state relative-caret-position="280">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="31" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1537367924752" expanded="true" signature="582:1727" ph="..." />
+            <marker date="1537416842314" expanded="true" signature="601:1857" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="250">
+          <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -603,20 +655,6 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiclient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1537370106305" expanded="true" signature="162:163" ph="..." />
-            <marker date="1537370106305" expanded="true" signature="430:431" ph="..." />
-            <marker date="1537370106305" expanded="true" signature="944:2024" ph="..." />
-            <marker date="1537370106305" expanded="true" signature="2050:2282" ph="..." />
           </folding>
         </state>
       </provider>

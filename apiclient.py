@@ -85,6 +85,28 @@ def array_To_Image(cols):
     new_image.save('new.png')
 
 
+def post_To_Recognize():
+    from PIL import Image
+
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
+    pix = im.load()
+    x, y = im.size
+
+    cols = list()
+    for i in range(0, y):
+        rows = []
+        for j in range(0, x):
+            rows.append(list(pix[j, i]))
+        cols.append(rows)
+
+    recognizeurl = URL + "recognize"
+    sendphoto = requests.post(url=recognizeurl, json=cols)
+    from ast import literal_eval
+    content = literal_eval(sendphoto.text)
+    print(content)
+    return content
+
+
 if __name__ == '__main__':
     # post_To_Detect()
     from ast import literal_eval
