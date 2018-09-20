@@ -8,6 +8,7 @@
 
 
 <div align="center" aria-orientation="horizontal">
+    <img src="/static/icons/people.png" style="width:100px; height:100px;" onclick='showAllPeople()'>
 
     <div class="image-upload">
         <label for="file-input">
@@ -57,6 +58,7 @@
         console.log( c.x, c.y, c.x2, c.y2, c.w, c.h);
   };
 
+
 </script>
 
 
@@ -93,6 +95,7 @@ $.get("/getmethodyy", function(data) {
 }
 
 
+
 </script>
 
 
@@ -123,6 +126,7 @@ $.get("/getmethodyy", function(data) {
 
         } );
     }
+
 
 
 </script>
@@ -166,6 +170,7 @@ $.get("/getmethodyy", function(data) {
   };
 
 
+
 </script>
 <!--<script>-->
 <!--&lt;!&ndash;switch visibility&ndash;&gt;-->
@@ -198,9 +203,10 @@ $.get("/getmethodyy", function(data) {
 
 
 
+
 </script>
 <script> function detect(){
-}
+
 
 
 
@@ -219,9 +225,43 @@ for(var i in indexes) {
     });
 
 
+}
+
+</script>
+<script>function showAllPeople(){
+
+console.log("show all people")
+var indexes;
+$.get("/getmethodallpeople", function(data) {
+    indexes = $.parseJSON(data)
+    console.log(indexes)
+
+$("#allpeoplelist").append("<ul></ul>");
+for(var i in indexes) {
+    var li = '<li onclick="showPerson(\'' + indexes[i]+ '\')">';
+    $("ul").append(li.concat(indexes[i]))
+}
+
+    });
+
+}
 
 </script>
 <div id="recognizeList"></div>
+<div id="allpeoplelist"></div>
+<script>
+    function showPerson(i){
+    console.log("htisddfsdfdf", i);
+
+
+$.get("/getOneFace/"+i, function(data) {
+    indexes = $.parseJSON(data)
+    console.log(indexes)
+});
+
+    }
+
+</script>
 </body>
 </html>
 

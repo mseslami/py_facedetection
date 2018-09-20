@@ -6,7 +6,7 @@ from flask import request, send_from_directory, send_file, Response, json
 from flask import Flask, render_template
 from werkzeug.debug import console
 
-from apiclient import post_To_Detect, post_To_Recognize
+from apiclient import post_To_Detect, post_To_Recognize, get_All_Faces, get_One_Face
 from project import users_blueprint
 
 # app = Flask(__name__, static_folder='static')
@@ -72,6 +72,16 @@ def recognize():
     return json.dumps(out)
 
 
+@app.route('/getmethodallpeople')
+def allFaces():
+    out = get_All_Faces()
+    return json.dumps(out)
+
+
+@app.route('/getOneFace/<userid>')
+def oneFace(userid):
+    out = get_One_Face(userid)
+    return json.dumps(out)
 
 if __name__ == '__main__':
     app.run()

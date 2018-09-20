@@ -21,18 +21,21 @@ def get_All_Faces():
     return allfaces
 
 
-def get_One_Face():
-    someoneresponse = requests.get(url=URL + "kim")
+def get_One_Face(userid):
+    someoneresponse = requests.get(url=URL + userid)
+    print("result of someone's album")
+    print(someoneresponse.text)
     oneface = someoneresponse.json()
     counter = 0
     for eachphoto in oneface:
+        print(type(eachphoto["data"]),eachphoto["data"])
         # print("thi s s a face")
         # print(eachphoto["data"])
         array = np.array(eachphoto["data"], dtype=numpy.uint8)
 
         # Use PIL to create an image from the new array of pixels
         new_image = Image.fromarray(array)
-        new_image.save('eachphoto' + counter + '.png')
+        new_image.save('eachphoto' + str(counter) + '.png')
         counter += 1
     # img = cv2.imread('messi5.jpg')
 
