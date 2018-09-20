@@ -80,8 +80,14 @@ def allFaces():
 
 @app.route('/getOneFace/<userid>')
 def oneFace(userid):
-    out = get_One_Face(userid)
-    return json.dumps(out)
+    lenOneFace = get_One_Face(userid)
+    return json.dumps(lenOneFace)
+
+
+# @app.route('/getmethodsomeonephoto')
+# def oneFaceLenght():
+#     out = get_One_Face(userid)
+#     return json.dumps(out)
 
 if __name__ == '__main__':
     app.run()

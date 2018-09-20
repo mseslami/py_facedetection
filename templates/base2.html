@@ -3,6 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/static/icons/magnifier.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
 </head>
 <body>
 
@@ -236,10 +274,10 @@ $.get("/getmethodallpeople", function(data) {
     indexes = $.parseJSON(data)
     console.log(indexes)
 
-$("#allpeoplelist").append("<ul></ul>");
+$("#allpeoplelist").append("<ul id='myUL'></ul>");
 for(var i in indexes) {
-    var li = '<li onclick="showPerson(\'' + indexes[i]+ '\')">';
-    $("ul").append(li.concat(indexes[i]))
+    var li = '<li onclick="showPerson(\'' + indexes[i]+ '\')"><a href="#">'+indexes[i]+'</a></li>';
+    $("ul").append(li)
 }
 
     });
@@ -247,21 +285,79 @@ for(var i in indexes) {
 }
 
 </script>
+
+
+<script>function showSomeonePhotos(){
+}
+
+</script>
+
 <div id="recognizeList"></div>
-<div id="allpeoplelist"></div>
+<!--<div id="allpeoplelist"></div>-->
+<div id="someonephoto"></div>
 <script>
     function showPerson(i){
     console.log("htisddfsdfdf", i);
 
+var indexes;
 
 $.get("/getOneFace/"+i, function(data) {
     indexes = $.parseJSON(data)
+    console.log('this is result of one face data')
     console.log(indexes)
+
+<!--$("#someonephoto").append("<ul></ul>");-->
+<!--for(var i =0; i<indexes; i++) {-->
+    <!--var li = '<li>';-->
+    <!--console.log("eachphoto"+(i)+".png");-->
+    <!--$("ul").append(li.concat('<img src="/home/maryam/PycharmProjects/facedetectionproject/templates/eachphoto'+ i +'.png" style="width:100px; height:100px;" >'))-->
+<!--}-->
+
 });
 
     }
 
 </script>
+
+
+<div id="search view">
+
+<h2>My Phonebook</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<!--<ul id="myUL">-->
+  <!--<li><a href="#">Adele</a></li>-->
+  <!--<li><a href="#">Agnes</a></li>-->
+
+  <!--<li><a href="#">Billy</a></li>-->
+  <!--<li><a href="#">Bob</a></li>-->
+
+  <!--<li><a href="#">Calvin</a></li>-->
+  <!--<li><a href="#">Christina</a></li>-->
+  <!--<li><a href="#">Cindy</a></li>-->
+<!--</ul>-->
+<div id="allpeoplelist"></div>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</div>
 </body>
 </html>
 

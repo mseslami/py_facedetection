@@ -37,6 +37,7 @@ def get_One_Face(userid):
         new_image = Image.fromarray(array)
         new_image.save('eachphoto' + str(counter) + '.png')
         counter += 1
+    return len(oneface)
     # img = cv2.imread('messi5.jpg')
 
 
