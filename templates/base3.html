@@ -64,7 +64,7 @@
 
 </head>
 <body style="background-color:coral;">
-<div style="position: relativ; top:50px; width:100%; height:width:100%;">
+<div style=" top:50px; width:90%;  height:500px; background-color:orange; position:reletiv;  margin-left:70px; margin-right:70px;">
     <div id="icondiv">
 
         <div class="image-upload" align="center" style="    margin-top: 50px;">
@@ -84,16 +84,16 @@
         </div>
     </div>
 
-    <div id="galleryholder" style=" background-color:green; width: 65%; height:50%;    position: absolute; left:10px; ">
+    <div id="galleryholder" style=" background-color:green; margin-left:80px; width: 45%; height:50%;    position: absolute; left:10px; ">
         <img id="croppr"
              style=" background-color:transparent;      max-width:100%;     ">
     </div>
 
-    <div id="cropholder" style=" background-color:yellow; width: 65%; height:50%;    position: absolute; left:10px; ">
+    <div id="cropholder" style=" background-color:yellow; margin-left:80px; width: 45%; height:50%;    position: absolute; left:10px; ">
 
     </div>
 
-    <div id="cameraholder" style=" background-color:red; width: 65%; height:50%;    position: absolute; left:10px; ">
+    <div id="cameraholder" style=" background-color:red; margin-left:80px; width: 45%; height:50%;    position: absolute; left:10px; ">
         <img id="cameraPhoto" style="width: 100%; height:100%; background-color:transparent;position: absolute; border-style: double;">
         <div id="cameraShow"
              style="width:160px; height:100px; background-color:transparent; position: absolute; margin-top:10px "></div>
@@ -104,7 +104,7 @@
 
     </div>
 
-    <div id="search view" style=" background-color:blue; width: 30%;    position: absolute; right:10px;">
+    <div id="search view" style=" background-color:blue; position: absolute; right:80px;     ">
 
 
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -146,7 +146,12 @@ function myFunction() {
 
 
 </div>
+<div style="position:reletiv">
 
+<div><h1 onclick="callCropper()" style="  position: absolute; vertical-align: bottom">send to database</h1></div>
+<div><h1 onclick="detect()" style=" z-index: -22; vertical-align: bottom">send to detect</h1></div>
+
+</div>
 
 <script>
     function showAllPeople(){
@@ -209,9 +214,52 @@ for(var i in indexes) {
   };
 <!--//////////////////////////////////////////////////////-->
 
+    function showPerson(i){
+    console.log("htisddfsdfdf", i);
+
+var indexes;
+
+$.get("/getOneFace/"+i, function(data) {
+    indexes = $.parseJSON(data)
+    console.log('this is result of one face data')
+    console.log(indexes)
+
+<!--$("#someonephoto").append("<ul></ul>");-->
+<!--for(var i =0; i<indexes; i++) {-->
+    <!--var li = '<li>';-->
+    <!--console.log("eachphoto"+(i)+".png");-->
+    <!--$("ul").append(li.concat('<img src="/home/maryam/PycharmProjects/facedetectionproject/templates/eachphoto'+ i +'.png" style="width:100px; height:100px;" >'))-->
+<!--}-->
+
+});
+
+    }
 
 
+<!--//////////////////////////////////////////////////////-->
+ function detect(){
 
+console.log("photo is being send to recognize")
+var indexes;
+$.get("/getmethodrecognize", function(data) {
+    indexes = $.parseJSON(data)
+    console.log(indexes)
+
+$("#recognizeList").append("<ul></ul>");
+for(var i in indexes) {
+    var li = "<li>";
+    $("ul").append(li.concat(indexes[i]))
+}
+
+    });
+
+
+}
+<!--//////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////-->
 
 
 
@@ -220,6 +268,15 @@ for(var i in indexes) {
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
 <script src="/static/webcam/webcam.js"></script>
+<script language="Javascript">
+
+  function showCoords(c)
+  {
+        console.log( c.x, c.y, c.x2, c.y2, c.w, c.h);
+  };
+
+
+</script>
 <script language="JavaScript">
     Webcam.attach( '#cameraShow' );
 
@@ -248,6 +305,41 @@ for(var i in indexes) {
 
 
 </script>
+
+<!--image cropper-->
+<!--http://deepliquid.com/content/Jcrop_Manual.html#Getting_Started-->
+<script src="/static/to/js/jquery.min.js"></script>
+<script src="/static/to/js/jquery.Jcrop.min.js"></script>
+<link rel="stylesheet" href="/static/to/css/jquery.Jcrop.css" type="text/css"/>
+<script language="Javascript">
+function callCropper(){
+    document.getElementById("croppView").style.visibility = "visible";
+
+console.log("photo is being created")
+var indexes;
+$.get("/getmethodyy", function(data) {
+    indexes = $.parseJSON(data)
+    console.log(indexes[0])
+
+    jQuery(function($) {
+        <!--croppView-->
+        $('#croppr').Jcrop({
+            onSelect: showCoords,
+            bgColor:     'black',
+            bgOpacity:   .4,
+            <!--setSelect:   [3,4,111,222],-->
+            setSelect:   indexes[0],
+        });
+    });
+
+})
+}
+</script>
+
+<div id="recognizeList">
+    <h1>ddd</h1>
+</div>
+<div id="someonephoto"></div>
 
 </body>
 </html>

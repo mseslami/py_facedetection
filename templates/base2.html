@@ -30,92 +30,10 @@
 </div>
 
 
-<div><h1 onclick="callCropper()">send to database</h1></div>
-<div><h1 onclick="detect()">send to detect</h1></div>
-
-<!--image cropper-->
-<!--http://deepliquid.com/content/Jcrop_Manual.html#Getting_Started-->
-<script src="/static/to/js/jquery.min.js"></script>
-<script src="/static/to/js/jquery.Jcrop.min.js"></script>
-<link rel="stylesheet" href="/static/to/css/jquery.Jcrop.css" type="text/css"/>
 <script></script>
 <script></script>
-<script language="Javascript">
-
-  function showCoords(c)
-  {
-        console.log( c.x, c.y, c.x2, c.y2, c.w, c.h);
-  };
 
 
-</script>
-
-
-<script language="Javascript">
-function callCropper(){
-    document.getElementById("croppView").style.visibility = "visible";
-
-console.log("photo is being created")
-var indexes;
-$.get("/getmethodyy", function(data) {
-    indexes = $.parseJSON(data)
-    console.log(indexes[0])
-
-    jQuery(function($) {
-        <!--croppView-->
-        $('#croppr').Jcrop({
-            onSelect: showCoords,
-            bgColor:     'black',
-            bgOpacity:   .4,
-            <!--setSelect:   [3,4,111,222],-->
-            setSelect:   indexes[0],
-        });
-    });
-
-})
-}
-</script>
-
-
-
-
-
-<!--<script>-->
-<!--&lt;!&ndash;switch visibility&ndash;&gt;-->
-<!--function toggleDisplay() {-->
-<!--var mainFrameOne = document.getElementById("imageview");-->
-<!--var mainFrameTwo = document.getElementById("imageview2");-->
-
-<!--mainFrameOne.style.display = (-->
-<!--mainFrameOne.style.display == "none" ? "block" : "none");-->
-<!--mainFrameTwo.style.display = (-->
-<!--mainFrameTwo.style.display == "none" ? "block" : "none");-->
-<!--}-->
-<!--</script>-->
-
-<script> function detect(){
-
-
-
-
-console.log("photo is being send to recognize")
-var indexes;
-$.get("/getmethodrecognize", function(data) {
-    indexes = $.parseJSON(data)
-    console.log(indexes)
-
-$("#recognizeList").append("<ul></ul>");
-for(var i in indexes) {
-    var li = "<li>";
-    $("ul").append(li.concat(indexes[i]))
-}
-
-    });
-
-
-}
-
-</script>
 
 
 <script>function showSomeonePhotos(){
@@ -123,31 +41,6 @@ for(var i in indexes) {
 
 </script>
 
-<div id="recognizeList"></div>
-<div id="someonephoto"></div>
-<script>
-    function showPerson(i){
-    console.log("htisddfsdfdf", i);
-
-var indexes;
-
-$.get("/getOneFace/"+i, function(data) {
-    indexes = $.parseJSON(data)
-    console.log('this is result of one face data')
-    console.log(indexes)
-
-<!--$("#someonephoto").append("<ul></ul>");-->
-<!--for(var i =0; i<indexes; i++) {-->
-    <!--var li = '<li>';-->
-    <!--console.log("eachphoto"+(i)+".png");-->
-    <!--$("ul").append(li.concat('<img src="/home/maryam/PycharmProjects/facedetectionproject/templates/eachphoto'+ i +'.png" style="width:100px; height:100px;" >'))-->
-<!--}-->
-
-});
-
-    }
-
-</script>
 
 
 </body>
