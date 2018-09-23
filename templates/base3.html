@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face detection</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/static/icons/magnifier.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+<!--zooming-->
+.zoom {
+    padding: 50px;
+    background-color: green;
+    transition: transform .3s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body style="background-color:coral;">
+<div style="position: relativ; top:50px; width:100%; height:width:100%;">
+    <div id="icondiv">
+
+        <div class="image-upload" align="center" style="    margin-top: 50px;">
+
+            <img class="zoom" src="/static/icons/magnifier.png" style="width:60px; height:60px; margin:10px;"
+                 onclick='showAllPeople()'>
+
+            <label for="file-input">
+                <img class="zoom" src="/static/icons/gallery.png" style="width:70px; height:70px; margin:10px;"
+                     onclick="hidegallery()"/>
+            </label>
+
+            <input id="file-input" type='file' accept='image/*' style="display: none;" onchange='openFile(event)'>
+
+            <img class="zoom" src="/static/icons/camera.png" style="width:70px; height:70px; margin:10px;"
+                 onclick='hidecamera()'>
+        </div>
+    </div>
+
+    <div id="galleryholder" style=" background-color:green; width: 65%; height:50%;    position: absolute; left:10px; ">
+        <img id="croppr"
+             style=" background-color:transparent;      max-width:100%;     ">
+    </div>
+
+    <div id="cropholder" style=" background-color:yellow; width: 65%; height:50%;    position: absolute; left:10px; ">
+
+    </div>
+
+    <div id="cameraholder" style=" background-color:red; width: 65%; height:50%;    position: absolute; left:10px; ">
+        <img id="cameraPhoto" style="width: 100%; height:100%; background-color:transparent;position: absolute; border-style: double;">
+        <div id="cameraShow"
+             style="width:160px; height:100px; background-color:transparent; position: absolute; margin-top:10px "></div>
+
+        <a href="javascript:void(take_snapshot())" style="position: absolute; right:10px; bottom:10px"> <img class="zoom"
+                                                                                     src="/static/icons/camera.png"
+                                                                                     style="width:70px; height:70px; margin:10px;"></a>
+
+    </div>
+
+    <div id="search view" style=" background-color:blue; width: 30%;    position: absolute; right:10px;">
+
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <!--<ul id="myUL">-->
+        <!--<li><a href="#">Cindy</a></li>-->
+        <!--</ul>-->
+        <div id="allpeoplelist"></div>
+
+        <script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </div>
+
+
+</div>
+
+
+<script>
+    function showAllPeople(){
+<!--shows list of names in data base (get faces)-->
+console.log("show all people")
+var indexes;
+$.get("/getmethodallpeople", function(data) {
+    indexes = $.parseJSON(data)
+    console.log(indexes)
+
+$("#allpeoplelist").append("<ul id='myUL'></ul>");
+for(var i in indexes) {
+    var li = '<li onclick="showPerson(\'' + indexes[i]+ '\')"><a href="#">'+indexes[i]+'</a></li>';
+    $("ul").append(li)
+}
+
+    });
+
+}
+<!--//////////////////////////////////////////////////////-->
+
+    function hidegallery(){
+    document.getElementById("galleryholder").style.visibility = "visible";
+    document.getElementById("cameraholder").style.visibility = "hidden";
+    document.getElementById("cropholder").style.visibility = "hidden";
+}
+
+    function hidecamera(){
+    document.getElementById("galleryholder").style.visibility = "hidden";
+    document.getElementById("cameraholder").style.visibility = "visible";
+    document.getElementById("cropholder").style.visibility = "hidden";
+
+}
+<!--//////////////////////////////////////////////////////-->
+<!--adding existing file:-->
+  var openFile = function(file) {
+    var input = file.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('croppr');
+      output.src = dataURL;
+
+       $.ajax({
+    type: "POST",
+    url: "{{ url_for("get_post_json") }}",
+    contentType: "application/json",
+    data: JSON.stringify({hello: "world", hi : dataURL}),
+    dataType: "json",
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(err) {
+        console.log(err);
+    }
+});
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+<!--//////////////////////////////////////////////////////-->
+
+
+
+
+
+
+
+
+</script>
+<!--webcam access-->
+<!--https://github.com/jhuckaby/webcamjs-->
+<script src="/static/webcam/webcam.js"></script>
+<script language="JavaScript">
+    Webcam.attach( '#cameraShow' );
+
+    function take_snapshot() {
+        Webcam.snap( function(data_uri) {
+            document.getElementById('cameraPhoto').src= data_uri;
+
+
+         $.ajax({
+    type: "POST",
+    url: "{{ url_for("get_post_json") }}",
+    contentType: "application/json",
+    data: JSON.stringify({hello: "world", hi : data_uri}),
+    dataType: "json",
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(err) {
+        console.log(err);
+    }
+});
+        } );
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

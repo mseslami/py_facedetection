@@ -3,60 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('/static/icons/magnifier.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-</style>
 
 </head>
 <body>
 
 
 <div align="center" aria-orientation="horizontal">
-    <img src="/static/icons/people.png" style="width:100px; height:100px;" onclick='showAllPeople()'>
 
-    <div class="image-upload">
-        <label for="file-input">
-            <img src="/static/icons/gallery.png" style="width:100px; height:100px;" onclick="hidegallery()"/>
-        </label>
-
-        <input id="file-input" type='file' accept='image/*' style="display: none;" onchange='openFile(event)'>
-
-        <img src="/static/icons/camera.png" style="width:100px; height:100px;" onclick='hidecamera()'>
-    </div>
 </div>
 
 
@@ -64,8 +17,6 @@
     <div id="imageview" align="center"
          style="width:640px; height:400px; background:#FF9900;   position: absolute;">
         <div id="cameraShow" style="width:160px; height:100px; background-color:transparent; position: absolute;"></div>
-        <img id="cameraPhoto"
-             style="width:640px; height:400px; background:#00779900; ">
 
     </div>
     <div id="imageview2" align="center" style="width:640px; height:400px; background:#FF9938;   position: absolute; ">
@@ -101,19 +52,14 @@
 
 
 <script language="Javascript">
-
 function callCropper(){
     document.getElementById("croppView").style.visibility = "visible";
-
-
 
 console.log("photo is being created")
 var indexes;
 $.get("/getmethodyy", function(data) {
     indexes = $.parseJSON(data)
     console.log(indexes[0])
-
-
 
     jQuery(function($) {
         <!--croppView-->
@@ -126,90 +72,14 @@ $.get("/getmethodyy", function(data) {
         });
     });
 
-
 })
-
-
 }
-
-
-
 </script>
 
 
-<!--webcam access-->
-<!--https://github.com/jhuckaby/webcamjs-->
-<script src="/static/webcam/webcam.js"></script>
-<script language="JavaScript">
-    Webcam.attach( '#cameraShow' );
-
-    function take_snapshot() {
-        Webcam.snap( function(data_uri) {
-            document.getElementById('cameraPhoto').src= data_uri;
-
-
-         $.ajax({
-    type: "POST",
-    url: "{{ url_for("get_post_json") }}",
-    contentType: "application/json",
-    data: JSON.stringify({hello: "world", hi : data_uri}),
-    dataType: "json",
-    success: function(response) {
-        console.log(response);
-    },
-    error: function(err) {
-        console.log(err);
-    }
-});
-
-        } );
-    }
 
 
 
-</script>
-
-
-<a href="javascript:void(take_snapshot())">Take Snapshot</a>
-
-<!--adding existing file:-->
-<script>
-  var openFile = function(file) {
-    var input = file.target;
-
-    var reader = new FileReader();
-    reader.onload = function(){
-      var dataURL = reader.result;
-      var output = document.getElementById('croppr');
-      output.src = dataURL;
-
-
-
-       $.ajax({
-    type: "POST",
-    url: "{{ url_for("get_post_json") }}",
-    contentType: "application/json",
-    data: JSON.stringify({hello: "world", hi : dataURL}),
-    dataType: "json",
-    success: function(response) {
-        console.log(response);
-    },
-    error: function(err) {
-        console.log(err);
-    }
-});
-
-
-    };
-    reader.readAsDataURL(input.files[0]);
-
-
-
-  };
-
-
-
-</script>
 <!--<script>-->
 <!--&lt;!&ndash;switch visibility&ndash;&gt;-->
 <!--function toggleDisplay() {-->
@@ -222,27 +92,7 @@ $.get("/getmethodyy", function(data) {
 <!--mainFrameTwo.style.display == "none" ? "block" : "none");-->
 <!--}-->
 <!--</script>-->
-<script>
-    function hidegallery(){
-    document.getElementById("imageview2").style.visibility = "visible";
-    document.getElementById("imageview").style.visibility = "hidden";
-    document.getElementById("croppView").style.visibility = "hidden";
-}
 
-    function hidecamera(){
-    document.getElementById("imageview2").style.visibility = "hidden";
-    document.getElementById("imageview").style.visibility = "visible";
-    document.getElementById("croppView").style.visibility = "hidden";
-
-}
-
-
-
-
-
-
-
-</script>
 <script> function detect(){
 
 
@@ -266,25 +116,6 @@ for(var i in indexes) {
 }
 
 </script>
-<script>function showAllPeople(){
-
-console.log("show all people")
-var indexes;
-$.get("/getmethodallpeople", function(data) {
-    indexes = $.parseJSON(data)
-    console.log(indexes)
-
-$("#allpeoplelist").append("<ul id='myUL'></ul>");
-for(var i in indexes) {
-    var li = '<li onclick="showPerson(\'' + indexes[i]+ '\')"><a href="#">'+indexes[i]+'</a></li>';
-    $("ul").append(li)
-}
-
-    });
-
-}
-
-</script>
 
 
 <script>function showSomeonePhotos(){
@@ -293,7 +124,6 @@ for(var i in indexes) {
 </script>
 
 <div id="recognizeList"></div>
-<!--<div id="allpeoplelist"></div>-->
 <div id="someonephoto"></div>
 <script>
     function showPerson(i){
@@ -320,44 +150,6 @@ $.get("/getOneFace/"+i, function(data) {
 </script>
 
 
-<div id="search view">
-
-<h2>My Phonebook</h2>
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-<!--<ul id="myUL">-->
-  <!--<li><a href="#">Adele</a></li>-->
-  <!--<li><a href="#">Agnes</a></li>-->
-
-  <!--<li><a href="#">Billy</a></li>-->
-  <!--<li><a href="#">Bob</a></li>-->
-
-  <!--<li><a href="#">Calvin</a></li>-->
-  <!--<li><a href="#">Christina</a></li>-->
-  <!--<li><a href="#">Cindy</a></li>-->
-<!--</ul>-->
-<div id="allpeoplelist"></div>
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
-
-</div>
 </body>
 </html>
 

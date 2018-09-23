@@ -23,12 +23,12 @@ def hello_name(name):
     return "Hello {}!".format(name)
 
 
+# @app.route('/')
+# def crop_layout():
+#     return render_template('base.html')
+
+
 @app.route('/')
-def crop_layout():
-    return render_template('base.html')
-
-
-@app.route('/crop')
 def crop_layout2():
     # if request.method == 'POST':
     #     print("ssssssssssssssssssssssssssss")
@@ -38,7 +38,7 @@ def crop_layout2():
     # return render_template('base2.html', the_json=the_json)
     out = {"a": "b", "c": "d"}
 
-    return render_template('base2.html', value=out)  # ,value=a
+    return render_template('base3.html', value=out)  # ,value=a
 
 
 @app.route('/_get_post_json/', methods=['POST', 'GET'])

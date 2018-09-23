@@ -2,7 +2,6 @@ import json
 
 import numpy
 import requests
-# import cv2
 from PIL import Image
 import numpy as np
 
@@ -78,6 +77,7 @@ def post_To_Detect():
         item[2], item[3] = item[3], item[2]
         print(item)
     return content
+
 
 
 def array_To_Image(cols):
