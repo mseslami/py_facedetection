@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="base3.html, new view created and improved;">
-      <change afterPath="$PROJECT_DIR$/static/particles.js" afterDir="false" />
+    <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/icons/crop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icons/detect.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiclient.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiclient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base3.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +22,7 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="5" />
+          <entry key="project.open.time.12" value="6" />
           <entry key="project.open.time.13" value="5" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="2" />
@@ -31,17 +31,17 @@
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="9" />
-          <entry key="gif" value="1" />
-          <entry key="html" value="17" />
-          <entry key="jpg" value="31" />
-          <entry key="js" value="22" />
-          <entry key="png" value="32" />
+          <entry key="css" value="11" />
+          <entry key="gif" value="2" />
+          <entry key="html" value="18" />
+          <entry key="jpg" value="40" />
+          <entry key="js" value="27" />
+          <entry key="png" value="33" />
           <entry key="py" value="34" />
           <entry key="rnc" value="1" />
           <entry key="txt" value="1" />
@@ -49,10 +49,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="9" />
-          <entry key="HTML" value="17" />
-          <entry key="Image" value="64" />
-          <entry key="JavaScript" value="22" />
+          <entry key="CSS" value="11" />
+          <entry key="HTML" value="18" />
+          <entry key="Image" value="75" />
+          <entry key="JavaScript" value="27" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="34" />
           <entry key="RNG Compact" value="1" />
@@ -60,17 +60,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="5467" />
+          <entry key="html" value="7332" />
           <entry key="js" value="16" />
           <entry key="py" value="3453" />
-          <entry key="txt" value="764" />
+          <entry key="txt" value="858" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="5467" />
+          <entry key="HTML" value="7332" />
           <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="764" />
+          <entry key="PLAIN_TEXT" value="858" />
           <entry key="Python" value="3453" />
         </counts>
       </usages-collector>
@@ -78,35 +78,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/croped.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apiclient.py">
+        <entry file="file://$PROJECT_DIR$/templates/base3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+            <state relative-caret-position="244">
+              <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1537769410397" expanded="true" signature="149:150" ph="..." />
-                <marker date="1537769410397" expanded="true" signature="423:424" ph="..." />
-                <marker date="1537769410397" expanded="true" signature="1096:2176" ph="..." />
-                <marker date="1537769410397" expanded="true" signature="2208:3325" ph="..." />
-                <marker date="1537769410397" expanded="true" signature="3323:3325" ph="..." />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#label#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,36 +129,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>allp</find>
-      <find>var li =</find>
-      <find>all</find>
-      <find>allpeople</find>
-      <find>for(var i in ind</find>
-      <find>crop</find>
-      <find>croppView</find>
       <find>callcro</find>
-      <find>croppview</find>
-      <find>post_To_Detect</find>
-      <find>change</find>
-      <find>console.log</find>
-      <find>hi</find>
-      <find>image.</find>
-      <find>data[&quot;hi</find>
-      <find>data: JSON.stringify</find>
-      <find>&quot;, data :</find>
-      <find>aja</find>
-      <find>hello</find>
-      <find>.x</find>
-      <find>yy</find>
-      <find>being send</find>
-      <find>getmethodrecognize</find>
-      <find>userimage</find>
-      <find>zz</find>
-      <find>array_To_Image</find>
-      <find>import urllib</find>
-      <find>home/maryam/PycharmProjects/facedetectionproject/userimage.jpg'</find>
-      <find>step</find>
-      <find>world</find>
+      <find>EMPTY</find>
+      <find>z-ind</find>
+      <find>galleryholder</find>
+      <find>cameraphoto</find>
+      <find>hidegal</find>
+      <find>camerashow</find>
+      <find>crop</find>
+      <find>callcrop</find>
+      <find>destroy(){</find>
+      <find>width</find>
+      <find>height</find>
+      <find>call</find>
+      <find>we</find>
+      <find>camera.</find>
+      <find>webcam</find>
+      <find>cameradialog</find>
+      <find>506px</find>
+      <find>450px</find>
+      <find>cropholder</find>
+      <find>id=&quot;crop</find>
+      <find>next.</find>
+      <find>callcropp</find>
+      <find>croppr</find>
+      <find>style.visibility = &quot;visible&quot;</find>
+      <find>cropicon</find>
+      <find>detect</find>
+      <find>list</find>
+      <find>ul&quot;).empt</find>
+      <find>destroy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,9 +184,9 @@
         <option value="$PROJECT_DIR$/templates/croplayout.html" />
         <option value="$PROJECT_DIR$/templates/base2.html" />
         <option value="$PROJECT_DIR$/static/particles.js" />
-        <option value="$PROJECT_DIR$/templates/base3.html" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/apiclient.py" />
+        <option value="$PROJECT_DIR$/templates/base3.html" />
       </list>
     </option>
   </component>
@@ -197,6 +202,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,13 +213,12 @@
             <path>
               <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,16 +227,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/icons" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/project" />
       <recent name="$PROJECT_DIR$/static/to" />
       <recent name="$PROJECT_DIR$/static/styles" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -402,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537700158407</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="recognize diffrent croped photos with diffrent results. but it's view is teribble">
+      <created>1537769791001</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1537769791001</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -418,12 +430,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15830721" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10344828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3282313" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3112245" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30442178" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43537414" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -473,7 +485,8 @@
     <MESSAGE value="saves each photo of someone which is selected in list" />
     <MESSAGE value="search view added" />
     <MESSAGE value="base3.html, new view created and improved;" />
-    <option name="LAST_COMMIT_MESSAGE" value="base3.html, new view created and improved;" />
+    <MESSAGE value="recognize diffrent croped photos with diffrent results. but it's view is teribble" />
+    <option name="LAST_COMMIT_MESSAGE" value="recognize diffrent croped photos with diffrent results. but it's view is teribble" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -490,7 +503,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/croppr/croppr.min.js" />
     <entry file="file://$PROJECT_DIR$/croppr.css" />
     <entry file="file://$PROJECT_DIR$/templates/croppr.css" />
     <entry file="file://$PROJECT_DIR$/static/croppr/croppr.min.css" />
@@ -514,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/to/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -538,35 +543,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/webcam/webcam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8822">
-          <caret line="991" column="35" selection-start-line="991" selection-start-column="27" selection-end-line="991" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file01.jpg" />
-    <entry file="file://$PROJECT_DIR$/static/to/css/jquery.Jcrop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/css/jquery.Jcrop.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/css/Jcrop.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1655" column="21" selection-start-line="1655" selection-start-column="21" selection-end-line="1655" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.color.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1254">
@@ -608,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/particles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23100">
-          <caret line="1540" column="2" selection-start-line="1540" selection-start-column="2" selection-end-line="1540" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -636,83 +606,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base3.html">
+    <entry file="file://$PROJECT_DIR$/project/new.png" />
+    <entry file="file://$PROJECT_DIR$/project/new2.png" />
+    <entry file="file://$PROJECT_DIR$/project/zzz.jpg" />
+    <entry file="file://$PROJECT_DIR$/project/zz.png" />
+    <entry file="file://$PROJECT_DIR$/project/zz.jpg" />
+    <entry file="file://$PROJECT_DIR$/project/croped.jpg" />
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="300" column="10" lean-forward="true" selection-start-line="300" selection-start-column="10" selection-end-line="300" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#label#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="56">
+          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userimage.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/new.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/new2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/zzz.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/zz.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/zz.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apiclient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1537769410397" expanded="true" signature="149:150" ph="..." />
-            <marker date="1537769410397" expanded="true" signature="423:424" ph="..." />
-            <marker date="1537769410397" expanded="true" signature="1096:2176" ph="..." />
-            <marker date="1537769410397" expanded="true" signature="2208:3325" ph="..." />
-            <marker date="1537769410397" expanded="true" signature="3323:3325" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/croped.jpg">
+    <entry file="file://$PROJECT_DIR$/static/to/css/jquery.Jcrop.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="1655" column="21" selection-start-line="1655" selection-start-column="21" selection-end-line="1655" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.Jcrop.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/js/jquery.color.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/css/jquery.Jcrop.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/to/css/Jcrop.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/static/webcam/webcam.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="106">
+          <caret line="359" column="59" selection-start-line="359" selection-start-column="53" selection-end-line="359" selection-end-column="59" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/particles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="1540" column="2" selection-start-line="1540" selection-start-column="2" selection-end-line="1540" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icons/delete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userimage.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/croped.jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#label#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
