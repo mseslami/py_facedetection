@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/icons/crop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icons/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icons/detect.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base3.html" afterDir="false" />
     </list>
@@ -60,17 +57,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="7332" />
+          <entry key="html" value="8042" />
           <entry key="js" value="16" />
           <entry key="py" value="3453" />
-          <entry key="txt" value="858" />
+          <entry key="txt" value="935" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="7332" />
+          <entry key="HTML" value="8042" />
           <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="858" />
+          <entry key="PLAIN_TEXT" value="935" />
           <entry key="Python" value="3453" />
         </counts>
       </usages-collector>
@@ -81,12 +78,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+            <state relative-caret-position="240">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -98,9 +97,11 @@
                 <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -129,15 +130,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>callcro</find>
-      <find>EMPTY</find>
-      <find>z-ind</find>
-      <find>galleryholder</find>
       <find>cameraphoto</find>
       <find>hidegal</find>
       <find>camerashow</find>
       <find>crop</find>
-      <find>callcrop</find>
       <find>destroy(){</find>
       <find>width</find>
       <find>height</find>
@@ -155,10 +151,15 @@
       <find>croppr</find>
       <find>style.visibility = &quot;visible&quot;</find>
       <find>cropicon</find>
-      <find>detect</find>
       <find>list</find>
       <find>ul&quot;).empt</find>
       <find>destroy</find>
+      <find>loader</find>
+      <find>callcrop</find>
+      <find>loadview</find>
+      <find>detect</find>
+      <find>search</find>
+      <find>all</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -414,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537769791001</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="camera-dialog added. next step for detect and crop added. destroy added.">
+      <created>1537807617289</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1537807617289</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -430,7 +438,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10344828" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.10344828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -486,7 +494,8 @@
     <MESSAGE value="search view added" />
     <MESSAGE value="base3.html, new view created and improved;" />
     <MESSAGE value="recognize diffrent croped photos with diffrent results. but it's view is teribble" />
-    <option name="LAST_COMMIT_MESSAGE" value="recognize diffrent croped photos with diffrent results. but it's view is teribble" />
+    <MESSAGE value="camera-dialog added. next step for detect and crop added. destroy added." />
+    <option name="LAST_COMMIT_MESSAGE" value="camera-dialog added. next step for detect and crop added. destroy added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,12 +686,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+        <state relative-caret-position="240">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -694,9 +705,11 @@
             <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
