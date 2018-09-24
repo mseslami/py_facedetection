@@ -9,7 +9,6 @@
 }
 
 #myInput {
-  background-image: url('/static/icons/magnifier.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
@@ -23,6 +22,9 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  overflow:hidden;
+  overflow-y:scroll;
+  height:300px;
 }
 
 #myUL li a {
@@ -113,8 +115,7 @@
         <!--<li><a href="#">Cindy</a></li>-->
         <!--</ul>-->
         <div id="allpeoplelist"></div>
-
-        <script>
+<script>
 function myFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
@@ -143,13 +144,16 @@ function myFunction() {
         </script>
 
     </div>
+    <h1 style="position:absolute; bottom:100px; right:50%;">
+        <img class="zoom" src="/static/icons/next.png" style="width:40px; height:40px;" onclick="detect()"/>
+    </h1>
 
 
 </div>
 <div style="position:reletiv">
 
-<div><h1 onclick="callCropper()" style="  position: absolute; vertical-align: bottom">send to database</h1></div>
-<div><h1 onclick="detect()" style=" z-index: -22; vertical-align: bottom">send to detect</h1></div>
+<div><h1 onclick="callCropper()" style="  position: absolute; vertical-align: bottom">send to being cropped</h1></div>
+<!--<div><h1 onclick="detect()" style=" z-index: -22; vertical-align: bottom">send to detect</h1></div>-->
 
 </div>
 
@@ -162,7 +166,9 @@ $.get("/getmethodallpeople", function(data) {
     indexes = $.parseJSON(data)
     console.log(indexes)
 
+$("#allpeoplelist").empty();
 $("#allpeoplelist").append("<ul id='myUL'></ul>");
+$("ul").empty();
 for(var i in indexes) {
     var li = '<li onclick="showPerson(\'' + indexes[i]+ '\')"><a href="#">'+indexes[i]+'</a></li>';
     $("ul").append(li)
@@ -245,10 +251,15 @@ $.get("/getmethodrecognize", function(data) {
     indexes = $.parseJSON(data)
     console.log(indexes)
 
-$("#recognizeList").append("<ul></ul>");
+<!--$("#recognizeList").append("<ul></ul>");-->
+$("#allpeoplelist").empty();
+$("#allpeoplelist").append("<ul id='myUL'></ul>");
+$("ul").empty();
 for(var i in indexes) {
-    var li = "<li>";
-    $("ul").append(li.concat(indexes[i]))
+    <!--var li = "<li>";-->
+    var li = '<li ><a href="#">'+indexes[i]+'</a></li>';
+
+    $("ul").append(li)
 }
 
     });
@@ -273,6 +284,37 @@ for(var i in indexes) {
   function showCoords(c)
   {
         console.log( c.x, c.y, c.x2, c.y2, c.w, c.h);
+
+
+
+var indexes = {
+    x:   c.x.toString(),
+    y: c.y.toString(),
+
+    x2:   c.x2.toString(),
+    y2: c.y2.toString(),
+};
+
+
+
+
+  $.ajax({
+    type: "POST",
+    url: "{{ url_for("get_post_json") }}",
+    contentType: "application/json",
+    data: JSON.stringify({hello: "world2", hi : indexes }),
+    dataType: "json",
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(err) {
+        console.log(err);
+    }
+});
+
+
+
+
   };
 
 
@@ -313,7 +355,7 @@ for(var i in indexes) {
 <link rel="stylesheet" href="/static/to/css/jquery.Jcrop.css" type="text/css"/>
 <script language="Javascript">
 function callCropper(){
-    document.getElementById("croppView").style.visibility = "visible";
+    document.getElementById("cropholder").style.visibility = "visible";
 
 console.log("photo is being created")
 var indexes;
@@ -336,9 +378,7 @@ $.get("/getmethodyy", function(data) {
 }
 </script>
 
-<div id="recognizeList">
-    <h1>ddd</h1>
-</div>
+<div id="recognizeList"></div>
 <div id="someonephoto"></div>
 
 </body>

@@ -12,6 +12,8 @@ from project import users_blueprint
 # app = Flask(__name__, static_folder='static')
 app = Flask(__name__)
 
+class cropindex():
+    new_dict = dict()
 
 @app.route('/hi/<user>')
 def hi_name(user):
@@ -48,14 +50,24 @@ def get_post_json():
     print(staticmethod, "method is sssssssssssss")
     data = request.get_json()
     print("ourdata is :", data["hi"])
+    if data["hello"]=="world":
+        print("you are in step 1")
+        import urllib
+        resource = urllib.request.urlopen(data["hi"])
+        output = open("userimage.jpg", "wb")
+        output.write(resource.read())
+        output.close()
 
-    import urllib
-    resource = urllib.request.urlopen(data["hi"])
-    output = open("userimage.jpg", "wb")
-    output.write(resource.read())
-    output.close()
+    elif data["hello"]=="world2":
+        print("you are in step 2")
+        print(data["hi"],'ddddddddddddddd')
+        cropindex.new_dict = data["hi"]
 
     return flask.jsonify(status="success", data=data)
+
+
+
+
 
 
 @app.route('/getmethodyy')
@@ -68,7 +80,8 @@ def report():
 
 @app.route('/getmethodrecognize')
 def recognize():
-    out = post_To_Recognize()
+    out = post_To_Recognize(cropindex.new_dict)
+    print(out)
     return json.dumps(out)
 
 

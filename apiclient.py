@@ -27,7 +27,7 @@ def get_One_Face(userid):
     oneface = someoneresponse.json()
     counter = 0
     for eachphoto in oneface:
-        print(type(eachphoto["data"]),eachphoto["data"])
+        print(type(eachphoto["data"]), eachphoto["data"])
         # print("thi s s a face")
         # print(eachphoto["data"])
         array = np.array(eachphoto["data"], dtype=numpy.uint8)
@@ -79,17 +79,17 @@ def post_To_Detect():
     return content
 
 
-
-def array_To_Image(cols):
+def array_To_Image(cols, name):
     # Convert the pixels into an array using numpy
     array = np.array(cols, dtype=numpy.uint8)
 
     # Use PIL to create an image from the new array of pixels
     new_image = Image.fromarray(array)
-    new_image.save('new.png')
+    new_image.save(name + '.jpg')
+    print("image saved :)")
 
 
-def post_To_Recognize():
+def post_To_Recognize(indexdict):
     from PIL import Image
 
     im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
@@ -97,24 +97,30 @@ def post_To_Recognize():
     x, y = im.size
 
     cols = list()
-    for i in range(0, y):
+    # for i in range(0, y):
+    #     rows = []
+    #     for j in range(0, x):
+    #         rows.append(list(pix[j, i]))
+    #     cols.append(rows)
+
+    for i in range(int(indexdict["y"]), int(indexdict["y2"])):
         rows = []
-        for j in range(0, x):
+        for j in range(int(indexdict["x"]), int(indexdict["x2"])):
             rows.append(list(pix[j, i]))
         cols.append(rows)
+
+
+    array_To_Image(cols, "croped")
+
 
     recognizeurl = URL + "recognize"
     sendphoto = requests.post(url=recognizeurl, json=cols)
     from ast import literal_eval
     content = literal_eval(sendphoto.text)
-    print(content)
+    print(content, "response for croped image")
     return content
 
 
 if __name__ == '__main__':
-    # post_To_Detect()
-    from ast import literal_eval
-
-    a = "[[0, 129, 125, 10]]"
-    a = literal_eval(a)
-    print(((a)[0][2]))
+    a = {'x': '44', 'y': '80', 'x2': '151', 'y2': '187'}
+    post_To_Recognize(a)
