@@ -18,6 +18,9 @@ class cropindex():
 @app.route('/hi/<user>')
 def hi_name(user):
     return render_template('base.html', name=user)
+@app.route('/net')
+def net():
+    return render_template('base4.html')
 
 
 @app.route('/hey/<name>')
