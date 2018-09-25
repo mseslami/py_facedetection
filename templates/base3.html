@@ -44,7 +44,6 @@
 <!--zooming-->
 .zoom {
     padding: 50px;
-    background-color: green;
     transition: transform .3s; /* Animation */
     width: 200px;
     height: 200px;
@@ -62,10 +61,10 @@
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink;
+  border-top: 16px solid #A9F9EF;
+  border-right: 16px solid #56717E;
+  border-left: 16px solid #84A0BF;
+  border-bottom: 16px solid #B1D1BF;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
@@ -108,10 +107,10 @@
 </div>
 
 <div id="particles-js"
-     style=" background: rgba(56,71,7E, 1);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:-2;">
+     style=" background: rgba(86,113,126, 1);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:-2;">
 </div>
 
-<div style=" top:50px; width:1100px;  height:600px; background-color:rgba(169,249,239 ,0.7);; position:reletiv;  margin-left:70px; margin-right:70px;">
+<div style=" top:50px; width:1100px;  height:600px; background-color:rgba(169,249,239 ,0.7); position:reletiv;  margin-left:70px; margin-right:70px;">
     <div id="icondiv">
 
         <div class="image-upload" align="center" style="    margin-top: 50px;">
@@ -141,7 +140,7 @@
              onload="console.log('i'm loading');">
     </div>
 
-    <div id="search view" style=" background-color:blue; position: absolute; right:80px;     ">
+    <div id="search view" style=" background-color:rgba(255,211,181,,0.7); position: absolute; right:180px;     ">
 
 
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -488,7 +487,7 @@ $.get("/getmethodyy", function(data) {
         <img id="cameraPhoto"
              style="width: 200px; height:150px; background-color:transparent;  position:absolute; z-index:2; margin:5px;">
         <div id="cameraShow"
-             style="width:600px; height:450px; background-color:yellow; position:absolute;"></div>
+             style="width:600px; height:450px; background-color:rgba(169,249,239 ,0.7); position:absolute;"></div>
 
         <a id="camerataker" href="javascript:void(take_snapshot())"
            style="position: absolute; right:10px; bottom:10px;z-index:2;">
