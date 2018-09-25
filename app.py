@@ -6,7 +6,7 @@ from flask import request, send_from_directory, send_file, Response, json
 from flask import Flask, render_template
 from werkzeug.debug import console
 
-from apiclient import post_To_Detect, post_To_Recognize, get_All_Faces, get_One_Face
+from apiclient import post_To_Detect, post_To_Recognize, get_All_Faces, get_One_Face, post_To_Insert
 from project import users_blueprint
 
 # app = Flask(__name__, static_folder='static')
@@ -65,6 +65,8 @@ def get_post_json():
         print("you are in step 2")
         print(data["hi"],'ddddddddddddddd')
         cropindex.new_dict = data["hi"]
+    elif data["hello"] =="insertname":
+        post_To_Insert(data["hi"])
 
     return flask.jsonify(status="success", data=data)
 
@@ -79,6 +81,12 @@ def report():
     out = post_To_Detect()
     # return Response('this is a sample response')
     return json.dumps(out)
+
+# @app.route('/getmethodinsert')
+# def reportinsert():
+#     out = post_To_Insert()
+#     print(out)
+#     return json.dumps(out)
 
 
 @app.route('/getmethodrecognize')

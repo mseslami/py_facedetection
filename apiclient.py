@@ -77,6 +77,43 @@ def post_To_Detect():
         item[2], item[3] = item[3], item[2]
         print(item)
     return content
+def post_To_Insert(username):
+    from PIL import Image
+
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
+    pix = im.load()
+    print(im.size)  # Get the width and hight of the image for iterating over
+    x, y = im.size
+
+    pixels = list()
+    rows = list()
+    cols = list()
+    for i in range(0, y):
+        rows = []
+        for j in range(0, x):
+            rows.append(list(pix[j, i]))
+        cols.append(rows)
+
+    # print(cols)
+    # simplecols = [[[5,6,7],[5,6,7]]]
+    detecturl = URL + username
+    sendphoto = requests.post(url=detecturl, json=cols)
+    # a = []
+    # b = sendphoto.text
+    # print("request to post a new photo \n", b)
+    # b =  [[0, 129, 125, 10]]
+    # b = list(sendphoto.text)
+    # content = (sendphoto.content)
+    # from ast import literal_eval
+    #
+    # content = literal_eval(sendphoto.text)
+    # for item in content:
+    #     print("changeing item indexes", item)
+    #     item[0], item[3] = item[3], item[0]
+    #     item[1], item[3] = item[3], item[1]
+    #     item[2], item[3] = item[3], item[2]
+    #     print(item)
+    # return content
 
 
 def array_To_Image(cols, name):
