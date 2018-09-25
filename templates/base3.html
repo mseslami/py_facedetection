@@ -91,6 +91,24 @@
 
     </style>
       <link rel="stylesheet" media="screen" href="static/netBackground/style.css">
+<script>
+console.log("destory is being called");
+    function destroy(){
+    console.log("it's being destroy");
+    document.getElementById('galleryholder').innerHTML='  <img class="zoom" src="/static/icons/delete.png"             style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">       <img id="nextface" class="zoom" src="/static/icons/nextface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:50px; right:10px; visibility: hidden;" onclick="nextface()">       <img id="backface" class="zoom" src="/static/icons/backface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;" onclick="backface()">       <img id="croppr" style=" background-color:transparent;  max-height:100%; max-width:100%;  "    >    ';
+    document.getElementById("camerataker").style.visibility = "hidden";
+    document.getElementById("cameraShow").style.visibility = "hidden";
+
+    document.getElementById("cropicon").style.visibility = "hidden";
+    document.getElementById("detecticon").style.visibility = "hidden";
+    $("ul").empty();
+
+
+    }
+
+
+
+</script>
 
 </head>
 <body style="background-color:transparent   ;  width: 100%;
@@ -133,11 +151,15 @@
 
 
     <div id="galleryholder"
-         style=" background-color: rgba(255,211,181, 0.7); margin-left:80px; width: 600px; height:450px;    position: absolute; left:10px; ">
+         style=" background-color: rgba(255,191,181, 0.7); margin-left:80px; width: 600px; height:450px;    position: absolute; left:10px; ">
         <img class="zoom" src="/static/icons/delete.png"
-             style="width:30px; height:30px;   z-index:2;position: absolute; top:10px; right:10px;" onclick="destroy()">
+             style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">
+        <img id="nextface" class="zoom" src="/static/icons/nextface.png"
+             style="width:40px; height:30px;   z-index:2;position: absolute; top:50px; right:10px; visibility: hidden;" onclick="nextface()">
+        <img id="backface" class="zoom" src="/static/icons/backface.png"
+             style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;" onclick="backface()">
         <img id="croppr" style=" background-color:transparent;  max-height:100%; max-width:100%;  "
-             onload="console.log('i'm loading');">
+             onload="console.log('im loading');">
     </div>
 
     <div id="search view" style=" background-color:rgba(255,211,181,,0.7); position: absolute; right:180px;     ">
@@ -202,23 +224,6 @@ function myFunction() {
 
 
 </div>
-<script>
-    function destroy(){
-    console.log("it's being destroy");
-    document.getElementById('galleryholder').innerHTML='         <img class="zoom" src="/static/icons/delete.png"                   style="width:30px; height:30px;   z-index:2;position: absolute; top:10px; right:10px;" onclick="destroy()"><img id="croppr"  style=" background-color:transparent;  max-height:100%; max-width:100%;   ">';
-    document.getElementById("camerataker").style.visibility = "hidden";
-    document.getElementById("cameraShow").style.visibility = "hidden";
-
-    document.getElementById("cropicon").style.visibility = "hidden";
-    document.getElementById("detecticon").style.visibility = "hidden";
-    $("ul").empty();
-
-
-    }
-
-
-
-</script>
 <script>
 
 
@@ -326,7 +331,7 @@ var indexes;
 $.get("/getmethodrecognize", function(data) {
     indexes = $.parseJSON(data)
     console.log(indexes)
-        document.getElementById("detecticon").style.visibility = "hidden";
+        <!--document.getElementById("detecticon").style.visibility = "hidden";-->
     document.getElementById("loadview").style.visibility = "hidden";
 
 
@@ -446,19 +451,30 @@ var indexes = {
 <script src="/static/to/js/jquery.Jcrop.min.js"></script>
 <link rel="stylesheet" href="/static/to/css/jquery.Jcrop.css" type="text/css"/>
 <script language="Javascript">
+var facecounter = 0;
+var facelen= 0;
+var indexes;
+
 function callCropper(){
     document.getElementById("loadview").style.visibility = "visible";
 
 
 console.log("photo is being created")
-var indexes;
 $.get("/getmethodyy", function(data) {
     indexes = $.parseJSON(data)
-    console.log(indexes[0])
+    console.log("this is indexes:", indexes)
     document.getElementById("cropicon").style.visibility = "hidden";
     document.getElementById("detecticon").style.visibility = "visible";
     document.getElementById("loadview").style.visibility = "hidden";
+    facecounter = 0;
+    facelen = indexes.length;
+    console.log(facelen);
 
+    if( facelen>1){
+    console.log('im going to show next and back');
+    document.getElementById("nextface").style.visibility = "visible";
+
+    }
 
     jQuery(function($) {
         <!--croppView-->
@@ -474,6 +490,51 @@ $.get("/getmethodyy", function(data) {
 })
 }
 
+ function nextface(){
+ facecounter += 1;
+ console.log("this is facecounter",facecounter)
+
+ if(facecounter<facelen && facelen!=1){
+  document.getElementById("backface").style.visibility = "visible";
+
+  jQuery(function($) {
+        <!--croppView-->
+        $('#croppr').Jcrop({
+            onSelect: showCoords,
+            bgColor:     'black',
+            bgOpacity:   .4,
+            setSelect:   indexes[facecounter],
+        });
+    });
+
+ }
+ if(facecounter==facelen-1){
+  document.getElementById("nextface").style.visibility = "hidden";
+ }
+
+ }
+ function backface(){
+  facecounter -= 1;
+ console.log("this is facecounter",facecounter)
+
+ if(facecounter>-1){
+  document.getElementById("nextface").style.visibility = "visible";
+
+  jQuery(function($) {
+        <!--croppView-->
+        $('#croppr').Jcrop({
+            onSelect: showCoords,
+            bgColor:     'black',
+            bgOpacity:   .4,
+            setSelect:   indexes[facecounter],
+        });
+    });
+
+ }
+ if(facecounter==0){
+  document.getElementById("backface").style.visibility = "hidden";
+ }
+}
 
 
 
@@ -484,6 +545,7 @@ $.get("/getmethodyy", function(data) {
          style=" background-color:rgba(FF,D3,B5, 0.7);  width: 600px; height:450px; position:relativ; ">
         <img class="zoom js-close" src="/static/icons/delete.png"
              style="width:30px; height:30px;   z-index:2;position: absolute; top:10px; right:10px;">
+
         <img id="cameraPhoto"
              style="width: 200px; height:150px; background-color:transparent;  position:absolute; z-index:2; margin:5px;">
         <div id="cameraShow"
@@ -518,6 +580,21 @@ closeButton.addEventListener('click', () => {
 <!-- scripts for net background :) -->
 <script src="static/netBackground/particles.js"></script>
 <script src="static/netBackground/app.js"></script>
+<script>
+    console.log("destory is being called");
+    function destroy(){
+    console.log("it's being destroy");
+    document.getElementById('galleryholder').innerHTML='  <img class="zoom" src="/static/icons/delete.png"             style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">       <img id="nextface" class="zoom" src="/static/icons/nextface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:50px; right:10px; visibility: hidden;" onclick="nextface()">       <img id="backface" class="zoom" src="/static/icons/backface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;" onclick="backface()">       <img id="croppr" style=" background-color:transparent;  max-height:100%; max-width:100%;  ">';
+    document.getElementById("camerataker").style.visibility = "hidden";
+    document.getElementById("cameraShow").style.visibility = "hidden";
 
+    document.getElementById("cropicon").style.visibility = "hidden";
+    document.getElementById("detecticon").style.visibility = "hidden";
+    $("ul").empty();
+
+
+    }
+
+</script>
 </body>
 </html>
