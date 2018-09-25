@@ -34,7 +34,7 @@ def get_One_Face(userid):
 
         # Use PIL to create an image from the new array of pixels
         new_image = Image.fromarray(array)
-        new_image.save('eachphoto' + str(counter) + '.png')
+        new_image.save('static/eachphoto/'+'eachphoto' + str(counter) + '.png')
         counter += 1
     return len(oneface)
     # img = cv2.imread('messi5.jpg')
