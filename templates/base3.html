@@ -24,6 +24,7 @@
   margin: 0;
   overflow:hidden;
   overflow-y:scroll;
+  width:300px;
   max-height:400px;
 }
 
@@ -93,22 +94,26 @@
 
 
 
+
     </style>
     <link rel="stylesheet" media="screen" href="static/netBackground/style.css">
     <script>
 console.log("destory is being called");
     function destroy(){
     console.log("it's being destroy");
-    document.getElementById('galleryholder').innerHTML='  <img class="zoom" src="/static/icons/delete.png"             style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">       <img id="nextface" class="zoom" src="/static/icons/nextface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:50px; right:10px; visibility: hidden;" onclick="nextface()">       <img id="backface" class="zoom" src="/static/icons/backface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;" onclick="backface()">       <img id="croppr" style=" background-color:transparent;  max-height:100%; max-width:100%;  "    >    ';
+    document.getElementById('galleryholder').innerHTML='  <img class="zoom" src="/static/icons/delete.png"             style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">       <img id="nextface" class="zoom" src="/static/icons/nextface.png"            style="width:40px; height:30px;   z-index:9000;position: absolute; top:50px; right:10px; visibility: hidden;" onclick="nextface()">       <img id="backface" class="zoom" src="/static/icons/backface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;" onclick="backface()">       <img id="croppr" style=" background-color:transparent;  max-height:100%; max-width:100%;  "    >    ';
     document.getElementById("camerataker").style.visibility = "hidden";
     document.getElementById("cameraShow").style.visibility = "hidden";
 
     document.getElementById("cropicon").style.visibility = "hidden";
     document.getElementById("detecticon").style.visibility = "hidden";
+    document.getElementById("inserticon").style.visibility = "hidden";
+
     $("ul").empty();
 
 
     }
+
 
 
 
@@ -160,12 +165,13 @@ console.log("destory is being called");
 
 
     <div id="galleryholder"
-         style=" background-color: rgba(86,113,126, 0.5); margin-left:80px; width: 600px; height:450px;    position: absolute; left:10px; ">
+         style=" background-color: rgba(86,113,126, 0.5); margin-left:80px; width: 650px; height:450px;    position: absolute; left:10px; ">
 
         <img class="zoom" src="/static/icons/delete.png"
+
              style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">
         <img id="nextface" class="zoom" src="/static/icons/nextface.png"
-             style="width:40px; height:30px;   z-index:2;position: absolute; top:50px; right:10px; visibility: hidden;"
+             style="width:40px; height:30px;   z-index:9000;position: absolute; top:50px; right10px; visibility: hidden;"
              onclick="nextface()">
         <img id="backface" class="zoom" src="/static/icons/backface.png"
              style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;"
@@ -206,6 +212,7 @@ function myFunction() {
         }
     }
 }
+
 
 
 
@@ -395,6 +402,7 @@ for(var i in indexes) {
 
 
 
+
 </script>
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
@@ -430,6 +438,7 @@ function opencamera(){
 });
         } );
     }
+
 
 
 
@@ -473,6 +482,7 @@ var indexes = {
 
 
   };
+
 
 
 
@@ -583,6 +593,7 @@ $.get("/getmethodyy", function(data) {
 
 
 
+
 </script>
 <script>
     function callInserter(){
@@ -616,6 +627,7 @@ $.get("/getmethodyy", function(data) {
 
 
 
+
 </script>
 
 <dialog class="dialog js-dialog" style=" width: 606px; height:456px;  padding:0px;    ">
@@ -624,7 +636,7 @@ $.get("/getmethodyy", function(data) {
         <img class="zoom js-close" src="/static/icons/delete.png"
              style="width:30px; height:30px;   z-index:2;position: absolute; top:10px; right:10px;">
 
-        <   img id="cameraPhoto"
+        <img id="cameraPhoto"
              style="width: 200px; height:150px; background-color:transparent;  position:absolute; z-index:2; margin:5px;">
         <div id="cameraShow"
              style="width:600px; height:450px; background-color:rgba(169,249,239 ,0.7); position:absolute;"></div>
@@ -654,32 +666,12 @@ closeButton.addEventListener('click', () => {
 
 
 
+
 </script>
 
 
 <!-- scripts for net background :) -->
 <script src="static/netBackground/particles.js"></script>
 <script src="static/netBackground/app.js"></script>
-<script>
-    console.log("destory is being called");
-    function destroy(){
-    console.log("it's being destroy");
-    document.getElementById('galleryholder').innerHTML='  <img class="zoom" src="/static/icons/delete.png"             style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">       <img id="nextface" class="zoom" src="/static/icons/nextface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:50px; right:10px; visibility: hidden;" onclick="nextface()">       <img id="backface" class="zoom" src="/static/icons/backface.png"            style="width:40px; height:30px;   z-index:2;position: absolute; top:80px; right:10px; visibility: hidden;" onclick="backface()">       <img id="croppr" style=" background-color:transparent;  max-height:100%; max-width:100%;  ">';
-    document.getElementById("camerataker").style.visibility = "hidden";
-    document.getElementById("cameraShow").style.visibility = "hidden";
-
-    document.getElementById("cropicon").style.visibility = "hidden";
-    document.getElementById("detecticon").style.visibility = "hidden";
-      document.getElementById("inserticon").style.visibility = "hidden";
-    $("ul").empty();
-
-
-    }
-
-
-
-
-
-</script>
 </body>
 </html>
