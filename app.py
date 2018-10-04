@@ -23,9 +23,6 @@ def net():
     return render_template('base5.html')
 @app.route('/detect')
 def detect():
-    return render_template('base3.html')
-@app.route('/detect2')
-def detect2():
     return render_template('detect.html')
 @app.route('/products')
 def products():

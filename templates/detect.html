@@ -315,16 +315,16 @@ function myFunction() {
 
 </div>
 
-<dialog class="dialog js-dialog " style=" width: 600px; height:450px;  padding:0px;    ">
+<dialog class="dialog js-dialog " style=" width: 600px; height:450px; backtound-color:black; padding:0px;    ">
     <div id="cameraholder"
-         style=" background-color:rgba(FF,D3,B5, 0.7);  width: 100%; height:100%; position:relativ; ">
+         style=" background-color:black;  width: 100%; height:100%; position:relativ; ">
         <img class="zoom js-close" src="/static/icons/delete.png"
              style="width:20px; height:20px;   z-index:2;position: absolute; top:10px; right:10px;">
 
         <img id="cameraPhoto" class="w3-card"
-             style="width: 200px; height:150px; background-color:transparent;  position:absolute; z-index:2; margin:5px;">
+             style="width: 200px; height:150px; display:none; background-color:transparent;  position:absolute; z-index:2; margin:5px;">
         <div id="cameraShow"
-             style="width:100%; height:100%; background-color:rgba(169,249,239 ,0.7); position:absolute;"></div>
+             style="width:100%; height:100%; background-color:black; position:absolute;"></div>
 
         <a id="camerataker" href="javascript:void(take_snapshot())"
            style="position: absolute; right:10px; bottom:10px;z-index:2;">
@@ -561,6 +561,8 @@ function opencamera(){
             document.getElementById('cameraPhoto').src= data_uri;
             document.getElementById("cropicon").style.visibility = "visible";
             document.getElementById("step1div").style.visibility = "hidden";
+            document.getElementById("cameraPhoto").style.display= "block";
+
 
 
 
@@ -828,6 +830,10 @@ $.get("/getmethodyy", function(data) {
 
 closeButton.addEventListener('click', () => {
   dialog.close();
+      $("#cameraPhoto").empty();
+  document.getElementById("cameraPhoto").style.display= "none";
+
+
 })
 
 
