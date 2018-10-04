@@ -34,7 +34,7 @@
   overflow:hidden;
   overflow-y:scroll;
   width:300px;
-  max-height:400px;
+  max-height:370px;
 }
 
 #myUL li a {
@@ -93,6 +93,8 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
 
 
 
@@ -175,7 +177,7 @@
     <div id="galleryholder" class="w3-container w3-card"
          style=" background-color: rgba(86,113,126, 0.5); margin-left:30px; margin-top:20px; width: 650px; height:450px;    position: absolute; left:10px; ">
 
-        <img class="zoom" src="/static/icons/delete.png"
+        <img  id="deleteimg"   class="zoom" src="/static/icons/delete.png"
 
              style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">
         <img id="nextface" class="zoom" src="/static/icons/nextface.png"
@@ -188,10 +190,11 @@
              onload="console.log('im loading');">
     </div>
     <div id="search view" class="w3-container w3-card"
-         style=" background-color:rgba(255,211,181,,0.7); width:300px; margin-left:30px; margin-top:20px;  position: absolute; left:10px;    ">
+         style=" background-color:rgba(255,211,181,,0.7); width:330px; height:450px; margin-left:30px; margin-top:20px;  position: absolute; left:10px; visibility:hidden;">
 
 
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="نام مورد نظر را جست و جو کنید"
+        <input type="text" id="myInput" onkeyup="myFunction()" style="margin-top:10px;"
+               placeholder="نام مورد نظر را جست و جو کنید"
                title="Type in a name">
 
         <!--<ul id="myUL">-->
@@ -206,11 +209,31 @@
 
         </div>
         <script>
+
+
+
+<!--function myFunction() {-->
+<!--console.log("myfuncion");-->
+    <!--var input, filter, ul, li, a, i;-->
+    <!--input = document.getElementById("myInput");-->
+    <!--filter = input.value.toUpperCase();-->
+    <!--ul = document.getElementById("#myUL");-->
+    <!--console.log(ul);-->
+    <!--li = ul.getElementsByTagName("li");-->
+    <!--for (i = 0; i < li.length; i++) {-->
+        <!--a = li[i].getElementsByTagName("a")[0];-->
+        <!--if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {-->
+            <!--li[i].style.display = "";-->
+        <!--} else {-->
+            <!--li[i].style.display = "none";-->
+        <!--}-->
+    <!--}-->
+<!--}-->
 function myFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("#myUL");
+    ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
@@ -228,6 +251,8 @@ function myFunction() {
 
 
 
+
+
         </script>
 
     </div>
@@ -237,11 +262,10 @@ function myFunction() {
          padding-top:30px; margin-right:30px">
 
 
-        <div style="position: absolute;">
+        <div id="step1div" style="position: absolute;">
             <img class="zoom" src="/static/icons/magnifier.png" style="width:60px; height:60px; margin:10px;"
                  onclick='showAllPeople()'>
             <p>جست و جو در دیتابیس</p>
-
 
 
             <label for="file-input">
@@ -258,7 +282,7 @@ function myFunction() {
             <p>افزودن عکس از دوربین</p>
 
         </div>
-        <div style="position: absolute;  visibility: hidden; " >
+        <div id="step2div" style="position: absolute;  visibility: hidden; ">
             <div id="detecticon" class="zoom"
                  style=" "
                  onclick="detect()">
@@ -324,11 +348,15 @@ console.log("destory is being called");
     document.getElementById("cropicon").style.visibility = "hidden";
     document.getElementById("detecticon").style.visibility = "hidden";
     document.getElementById("inserticon").style.visibility = "hidden";
+    document.getElementById("step1div").style.visibility = "visible";
+    document.getElementById("step2div").style.visibility = "hidden";
 
     $("#myUL").empty();
 
 
     }
+
+
 
 
 
@@ -348,6 +376,8 @@ console.log("destory is being called");
         document.getElementById("loadview").style.visibility = "visible";
         document.getElementById("inputnamediv").style.visibility = "hidden";
         document.getElementById('search view').style.visibility = 'visible';
+        document.getElementById('galleryholder').style.visibility = 'hidden';
+
 
 
 <!--shows list of names in data base (get faces)-->
@@ -379,12 +409,17 @@ for(var i in indexes) {
     destroy();
     document.getElementById("camerataker").style.visibility = "hidden";
     document.getElementById("cameraShow").style.visibility = "hidden";
+    document.getElementById("search view").style.visibility = "hidden";
+    document.getElementById("galleryholder").style.visibility = "visible";
 }
 
     function hidecamera(){
     destroy();
     document.getElementById("camerataker").style.visibility = "visible";
     document.getElementById("cameraShow").style.visibility = "visible";
+    document.getElementById("search view").style.visibility = "hidden";
+    document.getElementById("galleryholder").style.visibility = "visible";
+
 
 }
 <!--//////////////////////////////////////////////////////-->
@@ -398,6 +433,7 @@ for(var i in indexes) {
       var output = document.getElementById('croppr');
       output.src = dataURL;
           document.getElementById("cropicon").style.visibility = "visible";
+          document.getElementById("step1div").style.visibility = "hidden";
 
 
        $.ajax({
@@ -454,6 +490,9 @@ $.get("/getmethodrecognize", function(data) {
     console.log(indexes)
         <!--document.getElementById("detecticon").style.visibility = "hidden";-->
     document.getElementById("loadview").style.visibility = "hidden";
+    document.getElementById("search view").style.visibility = "visible";
+    document.getElementById("galleryholder").style.visibility = "hidden";
+    document.getElementById("croppr").style.visibility = "hidden";
 
 
 $("#allpeoplelist").empty();
@@ -496,6 +535,8 @@ for(var i in indexes) {
 
 
 
+
+
 </script>
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
@@ -513,6 +554,8 @@ function opencamera(){
             document.getElementById('croppr').src= data_uri;
             document.getElementById('cameraPhoto').src= data_uri;
             document.getElementById("cropicon").style.visibility = "visible";
+            document.getElementById("step1div").style.visibility = "hidden";
+
 
 
 
@@ -531,6 +574,8 @@ function opencamera(){
 });
         } );
     }
+
+
 
 
 
@@ -584,6 +629,8 @@ var indexes = {
 
 
   };
+
+
 
 
 
@@ -714,6 +761,8 @@ $.get("/getmethodyy", function(data) {
 
 
 
+
+
 </script>
 <script>
     function callInserter(){
@@ -757,6 +806,8 @@ $.get("/getmethodyy", function(data) {
 
 
 
+
+
 </script>
 <script>
   const dialog = document.querySelector('.js-dialog')
@@ -772,6 +823,8 @@ $.get("/getmethodyy", function(data) {
 closeButton.addEventListener('click', () => {
   dialog.close();
 })
+
+
 
 
 
