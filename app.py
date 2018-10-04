@@ -20,7 +20,22 @@ def hi_name(user):
     return render_template('base.html', name=user)
 @app.route('/net')
 def net():
-    return render_template('base4.html')
+    return render_template('base5.html')
+@app.route('/net2')
+def net2():
+    return render_template('index.html')
+@app.route('/detect')
+def detect():
+    return render_template('base3.html')
+@app.route('/products')
+def products():
+    return render_template('products.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 
 @app.route('/hey/<name>')
