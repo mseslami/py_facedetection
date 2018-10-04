@@ -15,18 +15,18 @@ app = Flask(__name__)
 class cropindex():
     new_dict = dict()
 
-@app.route('/hi/<user>')
-def hi_name(user):
-    return render_template('base.html', name=user)
+# @app.route('/hi/<user>')
+# def hi_name(user):
+#     return render_template('base.html', name=user)
 @app.route('/net')
 def net():
     return render_template('base5.html')
-@app.route('/net2')
-def net2():
-    return render_template('index.html')
 @app.route('/detect')
 def detect():
     return render_template('base3.html')
+@app.route('/detect2')
+def detect2():
+    return render_template('detect.html')
 @app.route('/products')
 def products():
     return render_template('products.html')
@@ -37,28 +37,28 @@ def about():
 def index():
     return render_template('index.html')
 
-
-@app.route('/hey/<name>')
-def hello_name(name):
-    return "Hello {}!".format(name)
-
+#
+# @app.route('/hey/<name>')
+# def hello_name(name):
+#     return "Hello {}!".format(name)
+#
 
 # @app.route('/')
 # def crop_layout():
 #     return render_template('base.html')
 
 
-@app.route('/')
-def crop_layout2():
-    # if request.method == 'POST':
-    #     print("ssssssssssssssssssssssssssss")
-    #     print(request.request.form.get('json_data', None))
-    # the_json = request.request.form.get('json_data', None)
-    # this template simply prints it out and all that I get is b"
-    # return render_template('base2.html', the_json=the_json)
-    out = {"a": "b", "c": "d"}
-
-    return render_template('base3.html', value=out)  # ,value=a
+# @app.route('/')
+# def crop_layout2():
+#     # if request.method == 'POST':
+#     #     print("ssssssssssssssssssssssssssss")
+#     #     print(request.request.form.get('json_data', None))
+#     # the_json = request.request.form.get('json_data', None)
+#     # this template simply prints it out and all that I get is b"
+#     # return render_template('base2.html', the_json=the_json)
+#     out = {"a": "b", "c": "d"}
+#
+#     return render_template('base3.html', value=out)  # ,value=a
 
 
 @app.route('/_get_post_json/', methods=['POST', 'GET'])
