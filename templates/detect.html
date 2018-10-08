@@ -121,8 +121,6 @@
 
 </head>
 <body>
-
-
 <div id="particles-js"
      style=" background: rgba(106,123,146, 1);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
 </div>
@@ -132,6 +130,8 @@
 
 
 <!-- Navigation -->
+
+
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-2" id="mainNav" style="margin-top:30px;">
     <div class="container">
         <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
@@ -143,6 +143,7 @@
             <ul class="navbar-nav mx-auto" dir="rtl">
                 <li class="nav-item  px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="index">خانه
+
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -527,7 +528,19 @@ $("#allpeoplelist").append("<ul id='myUL'></ul>");
 $("#myUL").empty();
 counter = 0;
 for(var i in indexes) {
- var li = '<li  class="searchli" ><img src="/static/nearface/'+indexes[i].toString() +'.png" style="width:100px; height:100px;"></li>';
+ var li = '<li  class="searchli" id="linearface"><img src="/static/nearface/'+indexes[i]["id"].toString() +'.png" style="width:100px; height:100px;"> <p class="pnearface">'+ indexes[i]["name"].toString() +'  ,   '+ indexes[i]["distance"].toString() +'</p>  </li>';
+     <!--$('.pnearface').eq(i).text(indexes[i]["name"].toString() );-->
+     <!--$('.pnearface').eq(i).css( "content", indexes[i]["name"].toString() );-->
+
+<!--var x = document.getElementsByClassName("anchors")[0]-->
+
+                         <!--var para = document.createElement("P");-->
+                         <!--var t = document.createTextNode("This is a paragraph.");-->
+                         <!--para.appendChild(t);-->
+                         <!--document.body.appendChild(para);-->
+                        <!--document.getElementById("linearface").appendChild(para);-->
+
+
     <!--var li = '<li  class="searchli" ><a href="#">'+indexes[i]+'</a></li>';-->
 
     $("#myUL").append(li);
@@ -891,6 +904,8 @@ closeButton.addEventListener('click', () => {
 <!--&lt;!&ndash; Bootstrap core JavaScript for menu &ndash;&gt;-->
 <!--<script src="static/vendor/jquery/jquery.min.js"></script>-->
 <!--<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+
+
 
 </body>
 </html>

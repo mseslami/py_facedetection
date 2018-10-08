@@ -163,24 +163,24 @@ def post_To_Recognize(indexdict):
     print(content, "response for croped image")
 
     # saving nearest faces in recognization
-    idlist=[]
+
+    response = []
+    responseobj = {}
+    idlist = []
     counter = 0
     for face in content:
-        print(face[1])
         someoneresponse = requests.get(url=URL + face[1])
-        print(someoneresponse.text)
         oneface = someoneresponse.json()
-        print(type(oneface[0]["data"]), oneface[0]["data"])
-        idlist.append(oneface[0]["id"])
-        # print("thi s s a face")
-        # print(eachphoto["data"])
         array = np.array(oneface[0]["data"], dtype=numpy.uint8)
+
         # Use PIL to create an image from the new array of pixels
         new_image = Image.fromarray(array)
-        new_image.save('static/nearface/' + str(oneface[0]["id"])+ '.png')
+        new_image.save('static/nearface/' + str(oneface[0]["id"]) + '.png')
         counter += 1
-
-    return idlist
+        response.append({"id": oneface[0]["id"], "distance": face[0], "name": face[1]})
+    print("this is response \n", response)
+    return response
+    # return idlist
     # return content
 
 

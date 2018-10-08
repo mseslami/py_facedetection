@@ -4,7 +4,6 @@
     <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiclient.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiclient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/croped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/croped.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detect.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detect.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userimage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/userimage.jpg" afterDir="false" />
@@ -23,7 +22,7 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="6" />
           <entry key="project.open.time.13" value="6" />
           <entry key="project.open.time.14" value="1" />
@@ -38,7 +37,7 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="37" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,7 +50,7 @@
           <entry key="json" value="5" />
           <entry key="map" value="1" />
           <entry key="png" value="84" />
-          <entry key="py" value="43" />
+          <entry key="py" value="44" />
           <entry key="rnc" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -64,26 +63,26 @@
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="45" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="43" />
+          <entry key="Python" value="44" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="6" />
-          <entry key="html" value="13995" />
+          <entry key="html" value="14535" />
           <entry key="js" value="16" />
-          <entry key="py" value="3929" />
-          <entry key="txt" value="1400" />
+          <entry key="py" value="4169" />
+          <entry key="txt" value="1415" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="6" />
-          <entry key="HTML" value="13995" />
+          <entry key="HTML" value="14535" />
           <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="1400" />
-          <entry key="Python" value="3929" />
+          <entry key="PLAIN_TEXT" value="1415" />
+          <entry key="Python" value="4169" />
         </counts>
       </usages-collector>
     </session>
@@ -93,9 +92,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/detect.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="529" column="134" selection-start-line="529" selection-start-column="134" selection-end-line="529" selection-end-column="134" />
+            <state relative-caret-position="143">
+              <caret line="530" column="235" selection-start-line="530" selection-start-column="235" selection-end-line="530" selection-end-column="235" />
               <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -136,6 +136,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apiclient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2610">
+              <caret line="179" column="84" selection-start-line="179" selection-start-column="84" selection-end-line="179" selection-end-column="84" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -148,11 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>var input, filter, ul, li, a, i;</find>
-      <find>hidegallery</find>
-      <find>ea</find>
-      <find>destroy</find>
-      <find>showall</find>
       <find>destroy()</find>
       <find>galleryholder</find>
       <find>delete.png</find>
@@ -178,6 +185,11 @@
       <find>oneface</find>
       <find>recogni</find>
       <find>nearface</find>
+      <find>this is</find>
+      <find>&lt;p&gt;</find>
+      <find>concat</find>
+      <find>near</find>
+      <find>pnearface</find>
     </findStrings>
     <replaceStrings>
       <replace>static/vendor/</replace>
@@ -221,8 +233,8 @@
         <option value="$PROJECT_DIR$/templates/products.html" />
         <option value="$PROJECT_DIR$/templates/about.html" />
         <option value="$USER_HOME$/Desktop/detect.html" />
-        <option value="$PROJECT_DIR$/apiclient.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/apiclient.py" />
         <option value="$PROJECT_DIR$/templates/detect.html" />
       </list>
     </option>
@@ -250,18 +262,6 @@
               <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="nearface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="to" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -555,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539006087588</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="showing imagelist (nearest people)  :)">
+      <created>1539008836986</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1539008836986</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -571,12 +578,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21555042" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.103156276" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3282313" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287879" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22424242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43537414" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -616,7 +623,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="camera is added" />
     <MESSAGE value="openening exitsting img is added.&#10;sends an img.uri from js to py and saves it :)" />
     <MESSAGE value="saves images from camera or gallery :)" />
     <MESSAGE value="gets array of indexes and create a crop view by given value" />
@@ -641,7 +647,8 @@
     <MESSAGE value="problem of lists solved" />
     <MESSAGE value="destoying views in diff steps got better" />
     <MESSAGE value="showing imagelist (show all people) solved by calling them by their id :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="showing imagelist (show all people) solved by calling them by their id :)" />
+    <MESSAGE value="showing imagelist (nearest people)  :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="showing imagelist (nearest people)  :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -809,16 +816,6 @@
     <entry file="file://$PROJECT_DIR$/static/nearface/0.6616078688804193.png" />
     <entry file="file://$PROJECT_DIR$/static/nearface/0.6663003244793714.png" />
     <entry file="file://$PROJECT_DIR$/static/nearface/0.6736166400908269.png" />
-    <entry file="file://$PROJECT_DIR$/apiclient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="182" column="17" selection-start-line="182" selection-start-column="17" selection-end-line="182" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -829,12 +826,8 @@
     <entry file="file://$PROJECT_DIR$/userimage.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/nearface/0b914d25-e2df-4780-9bab-673261021958.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/nearface/413d43be-732d-45d5-9ade-1d2a08716e58.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/nearface/0b914d25-e2df-4780-9bab-673261021958.png" />
+    <entry file="file://$PROJECT_DIR$/static/nearface/413d43be-732d-45d5-9ade-1d2a08716e58.png" />
     <entry file="file://$PROJECT_DIR$/static/nearface/f81c558e-6792-44b7-aba5-5d0abadbc454.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -849,9 +842,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/detect.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="529" column="134" selection-start-line="529" selection-start-column="134" selection-end-line="529" selection-end-column="134" />
+        <state relative-caret-position="143">
+          <caret line="530" column="235" selection-start-line="530" selection-start-column="235" selection-end-line="530" selection-end-column="235" />
           <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -887,6 +881,16 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="179" column="84" selection-start-line="179" selection-start-column="84" selection-end-line="179" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
