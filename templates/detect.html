@@ -379,6 +379,7 @@ console.log("destory is being called");
 </script>
 <script>
     function showAllPeople(){
+        document.getElementById("myInput").style.display= "block";
         document.getElementById("myInput").style.visibility = "visible";
         document.getElementById("loadview").style.visibility = "visible";
         document.getElementById("inputnamediv").style.visibility = "hidden";
@@ -474,6 +475,7 @@ $.get("/getOneFace/"+i, function(data) {
 
     indexes = $.parseJSON(data)
     console.log('this is result of one face data')
+    console.log(indexes.length)
     console.log(indexes)
 $("#allpeoplelist").empty();
 
@@ -482,12 +484,14 @@ $(".searchli").empty();
 
 $("#allpeoplelist").append("<ul id='myUL'></ul>");
 
-for(var i =0; i<indexes; i++) {
+for(var i =0; i<indexes.length; i++) {
+    console.log(indexes[i]);
     var li = '<li  class="searchli" >';
     console.log("eachphoto"+(i)+".png");
-    $("#myUL").append(li.concat('<img src="static/eachphoto/eachphoto'+ i +'.png" style="width:100px; height:100px;" >'));
+    <!--$("#myUL").append(li.concat('<img src="static/eachphoto/eachphoto'+ i +'.png" style="width:100px; height:100px;" >'));-->
 
-    $("#myUL").append('<li class="searchli"><img src="static/eachphoto/face'+ i +'.png" style="width:100px; height:100px;" ></li>');
+    <!--$("#myUL").append('<li class="searchli"><img src="static/eachphoto/eachphoto'+ i +'.png" style="width:100px; height:100px;  background-image: url("static/eachphoto/eachphoto'+ i +'.png" ) !important;" ></li>');-->
+    $("#myUL").append('<li class="searchli"><img src="static/eachphoto/'+ indexes[i] +'.png" style="width:100px; height:100px; ;" ></li>');
 
 }
 

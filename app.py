@@ -10,7 +10,14 @@ from apiclient import post_To_Detect, post_To_Recognize, get_All_Faces, get_One_
 from project import users_blueprint
 
 # app = Flask(__name__, static_folder='static')
+
 app = Flask(__name__)
+
+app.config["CACHE_TYPE"] = "null"
+# change to "redis" and restart to cache again
+
+# # some time later
+# cache.init_app(app)
 
 class cropindex():
     new_dict = dict()
@@ -116,8 +123,8 @@ def allFaces():
 
 @app.route('/getOneFace/<userid>')
 def oneFace(userid):
-    lenOneFace = get_One_Face(userid)
-    return json.dumps(lenOneFace)
+    onefacelist = get_One_Face(userid)
+    return json.dumps(onefacelist)
 
 
 # @app.route('/getmethodsomeonephoto')

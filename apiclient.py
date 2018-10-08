@@ -26,17 +26,23 @@ def get_One_Face(userid):
     print(someoneresponse.text)
     oneface = someoneresponse.json()
     counter = 0
+    imagenamelist = []
     for eachphoto in oneface:
+        print(eachphoto, "\n this is each photo")
         print(type(eachphoto["data"]), eachphoto["data"])
+        imagename = eachphoto["id"]
+        imagenamelist.append(imagename)
+        print(imagename, "\n this is image name")
         # print("thi s s a face")
         # print(eachphoto["data"])
         array = np.array(eachphoto["data"], dtype=numpy.uint8)
 
         # Use PIL to create an image from the new array of pixels
         new_image = Image.fromarray(array)
-        new_image.save('static/eachphoto/'+'eachphoto' + str(counter) + '.png')
+        new_image.save('static/eachphoto/' + imagename + '.png')
         counter += 1
-    return len(oneface)
+    return imagenamelist
+    # return len(oneface)
     # img = cv2.imread('messi5.jpg')
 
 
@@ -77,6 +83,8 @@ def post_To_Detect():
         item[2], item[3] = item[3], item[2]
         print(item)
     return content
+
+
 def post_To_Insert(username):
     from PIL import Image
 
@@ -146,9 +154,7 @@ def post_To_Recognize(indexdict):
             rows.append(list(pix[j, i]))
         cols.append(rows)
 
-
     array_To_Image(cols, "croped")
-
 
     recognizeurl = URL + "recognize"
     sendphoto = requests.post(url=recognizeurl, json=cols)
