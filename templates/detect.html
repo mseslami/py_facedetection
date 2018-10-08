@@ -508,7 +508,7 @@ console.log("photo is being send to recognize")
 var indexes;
 $.get("/getmethodrecognize", function(data) {
     indexes = $.parseJSON(data)
-    console.log(indexes)
+    console.log(indexes,"\n this is indexes")
         <!--document.getElementById("detecticon").style.visibility = "hidden";-->
     document.getElementById("loadview").style.visibility = "hidden";
     document.getElementById("search view").style.visibility = "visible";
@@ -527,7 +527,7 @@ $("#allpeoplelist").append("<ul id='myUL'></ul>");
 $("#myUL").empty();
 counter = 0;
 for(var i in indexes) {
- var li = '<li  class="searchli" ><img src="/static/nearface/nearestface'+counter.toString()+'.png"></li>';
+ var li = '<li  class="searchli" ><img src="/static/nearface/'+indexes[i].toString() +'.png" style="width:100px; height:100px;"></li>';
     <!--var li = '<li  class="searchli" ><a href="#">'+indexes[i]+'</a></li>';-->
 
     $("#myUL").append(li);

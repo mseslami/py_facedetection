@@ -111,7 +111,7 @@ def report():
 @app.route('/getmethodrecognize')
 def recognize():
     out = post_To_Recognize(cropindex.new_dict)
-    print(out)
+    print(out, "\n this is id list")
     return json.dumps(out)
 
 
