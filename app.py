@@ -31,6 +31,9 @@ def net():
 @app.route('/detect')
 def detect():
     return render_template('detect.html')
+@app.route('/detect2')
+def detect2():
+    return render_template('detect2.html')
 @app.route('/products')
 def products():
     return render_template('products.html')

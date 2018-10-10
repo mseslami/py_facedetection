@@ -27,7 +27,7 @@ canvas{
   top: 48px;
   left: 0;
   width: 80px;
-  color: #13E8E9;
+  color: #b8f9f9;
   font-size: .8em;
   text-align: left;
   text-indent: 4px;
@@ -63,7 +63,7 @@ canvas{
 #particles-js{
   width: 100%;
   height: 100%;
-  background-color: #56717E;
+  background-color: #b3c3cb;
   background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
