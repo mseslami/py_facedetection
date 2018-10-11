@@ -161,6 +161,7 @@ body{
 
 
 
+
     </style>
 
 </head>
@@ -369,10 +370,10 @@ body{
              onclick='hidecamera();'>
         <p>افزودن عکس از دوربین</p>
         <div style="visibility:hidden;" id="detectstep1">
-        <img  class="zoom js-open" src="/static/icons/detect.png"
-             style="width:50px; height:50px; margin:10px; "
-             onclick='detect();'>
-        <p>برش تصویر</p>
+            <img class="zoom js-open" src="/static/icons/detect.png"
+                 style="width:50px; height:50px; margin:10px; "
+                 onclick='detect();'>
+            <p>برش تصویر</p>
 
         </div>
 
@@ -387,7 +388,7 @@ body{
         </div>
     </div>
     <div class="   w3-display-right" id="startagain" style="margin-right:100px; visibility:hidden;"
-         onclick="detectview();">
+         onclick="detectview(); startagain();">
         <div class="w3-round-large w3-button w3-white"
              style=" padding:5px; ">
             <p class="fa fa-refresh" style=" display:inline; font-size:24px; "> شروع دوباره</p>
@@ -397,7 +398,7 @@ body{
 
     <div id="galleryholder" class="w3-container w3-card"
          style=" background-color: rgba(255,255,255, 0.5); margin-left:30px; margin-top:20px; width: 650px; height:450px;    position: absolute; left:10px; ">
-<!--rgba(86,113,126, 0.5)-->
+        <!--rgba(86,113,126, 0.5)-->
         <img id="deleteimg" class="zoom" src="/static/icons/delete.png"
 
              style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">
@@ -480,11 +481,13 @@ function myFunction() {
 
 
 
+
         </script>
 
     </div>
     <div style="margin-left:400px; margin-top:50px; backgorund:red; visibility:hidden;" id="userimagediv">
-        <img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg"></div>
+        <img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg">
+    </div>
 
 
 </div>
@@ -543,6 +546,7 @@ console.log("destory is being called");
 
 
 
+
 </script>
 
 <script>
@@ -556,6 +560,9 @@ console.log("destory is being called");
         document.getElementById('steps').style.visibility = 'hidden';
         document.getElementById('steps2').style.visibility = 'hidden';
         document.getElementById('detecticons').style.visibility = 'hidden';
+        document.getElementById('startagain').style.visibility = 'hidden';
+        document.getElementById('userimagediv').style.visibility = 'hidden';
+        document.getElementById('detectstep1').style.visibility = 'hidden';
 
         document.getElementById("searchstep").classList.add('active');
     document.getElementById("detectstep").classList.remove('active');
@@ -621,7 +628,6 @@ for(var i in indexes) {
       var dataURL = reader.result;
       var output = document.getElementById('croppr');
       output.src = dataURL;
-        callCropper();
 
 
        $.ajax({
@@ -632,6 +638,8 @@ for(var i in indexes) {
     dataType: "json",
     success: function(response) {
         console.log(response);
+                callCropper();
+
     },
     error: function(err) {
         console.log(err);
@@ -685,7 +693,10 @@ for(var i =0; i<indexes.length; i++) {
 console.log("photo is being send to recognize")
 var indexes;
 $.get("/getmethodrecognize", function(data) {
-    indexes = $.parseJSON(data)
+
+    var response = $.parseJSON(data);
+    indexes = response["recog"];
+
     console.log(indexes,"\n this is indexes")
     document.getElementById("loadview").style.visibility = "hidden";
     document.getElementById("search view").style.visibility = "visible";
@@ -697,6 +708,9 @@ $.get("/getmethodrecognize", function(data) {
 
     document.getElementById("step3").classList.add('complete');
     document.getElementById("step3").classList.remove('disabled');
+
+    console.log(response["userimagename"]);
+    document.getElementById('userimagediv').innerHTML='  <img  src="/static/'+response["userimagename"]+'.jpg"     style="max-width:370px; min-width:300px;" >    ';
 
 
     document.getElementById("inserticon").style.visibility = "hidden";
@@ -738,6 +752,7 @@ for(var i in indexes) {
 <!--//////////////////////////////////////////////////////-->
 <!--//////////////////////////////////////////////////////-->
 <!--//////////////////////////////////////////////////////-->
+
 
 
 
@@ -829,6 +844,7 @@ function opencamera(){
 
 
 
+
 </script>
 <script language="Javascript">
 
@@ -867,6 +883,7 @@ var indexes = {
 
 
   };
+
 
 
 
@@ -1026,6 +1043,12 @@ function insertview(){
     document.getElementById("insertstep").classList.add('active');
 
 }
+function startagain(){
+  document.getElementById("step2").classList.remove('complete');
+  document.getElementById("step2").classList.add('disabled');
+  document.getElementById("step3").classList.remove('complete');
+  document.getElementById("step3").classList.add('disabled');
+}
 
 
 
@@ -1093,6 +1116,7 @@ function insertview(){
 
 
 
+
 </script>
 <script>
   const dialog = document.querySelector('.js-dialog')
@@ -1112,6 +1136,7 @@ closeButton.addEventListener('click', () => {
 
 
 })
+
 
 
 

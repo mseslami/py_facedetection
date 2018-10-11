@@ -25,6 +25,15 @@ def get_One_Face(userid):
     print("result of someone's album")
     print(someoneresponse.text)
     oneface = someoneresponse.json()
+
+    # clear nearest faces dir:
+    import os
+
+    filelist = [f for f in os.listdir('static/eachphoto/') if f.endswith(".png")]
+    for f in filelist:
+        os.remove(os.path.join('static/eachphoto/', f))
+        print("image removed form eachphoto dir")
+
     counter = 0
     imagenamelist = []
     for eachphoto in oneface:
@@ -46,10 +55,12 @@ def get_One_Face(userid):
     # img = cv2.imread('messi5.jpg')
 
 
-def post_To_Detect():
+def post_To_Detect(userimagename):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/userimage.jpg')
+
+
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/'+userimagename+'.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -85,10 +96,10 @@ def post_To_Detect():
     return content
 
 
-def post_To_Insert(username):
+def post_To_Insert(username,userimagename):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/userimage.jpg')
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/'+userimagename+'.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -134,10 +145,10 @@ def array_To_Image(cols, name):
     print("image saved :)")
 
 
-def post_To_Recognize(indexdict):
+def post_To_Recognize(indexdict,userimagename):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/userimage.jpg')
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/'+userimagename+'.jpg')
     pix = im.load()
     x, y = im.size
 
@@ -161,6 +172,13 @@ def post_To_Recognize(indexdict):
     from ast import literal_eval
     content = literal_eval(sendphoto.text)
     print(content, "response for croped image")
+    # clear nearest faces dir:
+    import os
+
+    filelist = [f for f in os.listdir('static/nearface/') if f.endswith(".png")]
+    for f in filelist:
+        os.remove(os.path.join('static/nearface/' , f))
+        print("image removed form nearest dir")
 
     # saving nearest faces in recognization
 

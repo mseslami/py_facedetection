@@ -21,6 +21,8 @@ app.config["CACHE_TYPE"] = "null"
 
 class cropindex():
     new_dict = dict()
+class userimgname():
+    userimagename = ""
 
 # @app.route('/hi/<user>')
 # def hi_name(user):
@@ -74,9 +76,19 @@ def get_post_json():
     print("ourdata is :", data["hi"])
     if data["hello"]=="world":
         print("you are in step 1")
+        # remove userimage:
+        import os
+        filelist = [f for f in os.listdir('static/') if f.endswith(".jpg")]
+        for f in filelist:
+            os.remove(os.path.join('static/', f))
+            print("image removed form static dir( userimage and crop image)")
+
         import urllib
+        import uuid
+        userimgname.userimagename = uuid.uuid4().hex
+        print(userimgname.userimagename)
         resource = urllib.request.urlopen(data["hi"])
-        output = open("static/userimage.jpg", "wb")
+        output = open("static/"+userimgname.userimagename+".jpg", "wb")
         output.write(resource.read())
         output.close()
 
@@ -85,7 +97,7 @@ def get_post_json():
         print(data["hi"],'ddddddddddddddd')
         cropindex.new_dict = data["hi"]
     elif data["hello"] =="insertname":
-        post_To_Insert(data["hi"])
+        post_To_Insert(data["hi"],userimgname.userimagename)
 
     return flask.jsonify(status="success", data=data)
 
@@ -97,7 +109,8 @@ def get_post_json():
 @app.route('/getmethodyy')
 def report():
     out = [130, 120, 700, 420]
-    out = post_To_Detect()
+    print(userimgname.userimagename, "befor post to detect")
+    out = post_To_Detect(userimgname.userimagename)
     # return Response('this is a sample response')
     return json.dumps(out)
 
@@ -110,9 +123,11 @@ def report():
 
 @app.route('/getmethodrecognize')
 def recognize():
-    out = post_To_Recognize(cropindex.new_dict)
-    print(out, "\n this is id list")
-    return json.dumps(out)
+    out = post_To_Recognize(cropindex.new_dict,userimgname.userimagename)
+    out2 = {"userimagename":userimgname.userimagename, "recog":out}
+    print(out2, "\n this is id list")
+    return json.dumps(out2)
+
 
 
 @app.route('/getmethodallpeople')
