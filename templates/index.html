@@ -11,17 +11,34 @@
     <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 
     <!-- Custom styles for this template -->
+
+    <style>
+
+        @font-face {
+        font-family: "irannastaligh";
+        src: url(/static/IranNastaliq-Web.ttf);
+}
+* {
+     font-family: "irannastaligh";
+            font-size: 20px;
+
+
+}
+body{
+ background: rgb(41, 54, 61);  }
+
+    </style>
 
 </head>
 
 <body>
 
 <div id="particles-js"
-     style=" background: rgba(106,123,146, 1);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
+     style=" background: rgb(41, 54, 61);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
 </div>
 <!-- scripts for net background :) -->
 <script src="static/netBackground/particles.js"></script>
@@ -30,7 +47,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-2 " id="mainNav"
-     style="background-color:rgba(44,66,77,0.6); margin-top:30px;">
+     style="background-color:rgba(255, 255, 255,0.8); margin-top:30px;">
     <div class="container ">
         <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -39,20 +56,27 @@
         </button>
         <div class="collapse navbar-collapse w3-display-middle" id="navbarResponsive">
             <ul class="navbar-nav mx-auto" dir="rtl">
-                <li class="nav-item  px-lg-4 active" >
-                    <a class="nav-link text-uppercase text-expanded" href="index">خانه
+                <li class="nav-item  px-lg-4 active">
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;    " href="index">خانه
 
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item  px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="detect">پردازش چهره</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;  " href="detect">پردازش
+                        چهره</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="products">معرفی محصول</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;    "
+                       href="products">معرفی محصول</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="about">درباره ما</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;   " href="about">درباره
+                        ما</a>
                 </li>
 
             </ul>
@@ -61,27 +85,27 @@
 </nav>
 <br>
 
-    <div class="w3-display-topmiddle" style="margin-top:100px; position :absolute;">
-        <div class="">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-                 src="http://cert.qom.ac.ir/wp-content/uploads/2018/08/main.jpg" alt="" style="z-index:3;">
-            <div class="text-center bg-faded  rounded w3-display-topmiddle" style="background-color:rgba(255,255,255,0.7); width:400px; position:absolute; margin-top:300px;">
-                <h2 class="section-heading mb-4">
-                    <span class="section-heading-lower">سامانه تشخیص چهره</span>
-                    <span class="section-heading-upper">مرکز آپا دانشگاه قم</span>
-                </h2>
-                <p class="mb-3">
+<div class="w3-display-topmiddle" style="margin-top:100px; position :absolute;">
+    <div class="">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+             src="http://cert.qom.ac.ir/wp-content/uploads/2018/08/main.jpg" alt="" style="z-index:3;">
+        <div class="text-center bg-faded  rounded w3-display-topmiddle"
+             style="background-color:rgba(255,255,255,0.7); width:300px;  position:absolute; margin-top:300px;">
+            <h2 class="section-heading mb-4" style="margin-top:50px;">
+                <span class="section-heading-lower" style="font-size:40px;  ">سامانه تشخیص چهره </span>
 
-                </p>
-                <div class="intro-button mx-auto">
+                <span class="section-heading-upper" style="font-size:20px;"> مرکز آپا دانشگاه قم  </span>
+            </h2>
+
+            <div class="intro-button mx-auto">
 
 
-                    <h1><a class="btn btn-l "
-                           style="background-color:rgba(168,211,48,0.85); color:black; margin-top:-50px;"
-                           href="detect">       تست و اجرا    </a></h1></div>
-            </div>
+                <h1><a class="w3-button  w3-round-small btn "
+                       style="background-color:rgb(41, 54, 61 , 0.9);    margin-top:-10px; font-size:17px; color:white;"
+                       href="detect"> تست و اجرا </a></h1></div>
         </div>
     </div>
+</div>
 
 
 <!--<footer class="footer text-faded text-center py-5">-->

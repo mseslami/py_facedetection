@@ -24,7 +24,17 @@
     <style>
 * {
   box-sizing: border-box;
+    font-family: "irannastaligh";
+            font-size: 20px;
+
 }
+
+        @font-face {
+        font-family: "irannastaligh";
+        src: url(/static/IranNastaliq-Web.ttf);
+}
+body{
+ background: rgb(41, 54, 61);  }
 
 #myInput {
   background-position: 10px 12px;
@@ -156,7 +166,7 @@
 </head>
 <body>
 <div id="particles-js"
-     style=" background: rgba(106,123,146, 1);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
+     style=" background: 	rgb(41, 54, 61);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
 </div>
 <!-- scripts for net background :) -->
 <script src="static/netBackground/particles.js"></script>
@@ -167,7 +177,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-2 " id="mainNav"
-     style="background-color:rgba(44,66,77,0.6); margin-top:30px;">
+     style="background-color:rgba(255, 255, 255,0.8); margin-top:30px;">
     <div class="container ">
         <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -176,20 +186,27 @@
         </button>
         <div class="collapse navbar-collapse w3-display-middle" id="navbarResponsive">
             <ul class="navbar-nav mx-auto" dir="rtl">
-                <li class="nav-item  px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="index">خانه
+                <li class="nav-item  px-lg-4 active">
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;    " href="index">خانه
 
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="detect">پردازش چهره</a>
+                <li class="nav-item  px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;  " href="detect">پردازش
+                        چهره</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="products">معرفی محصول</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;    "
+                       href="products">معرفی محصول</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="about">درباره ما</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;   " href="about">درباره
+                        ما</a>
                 </li>
 
             </ul>
@@ -208,7 +225,7 @@
         <div class="collapse navbar-collapse w3-display-middle" id="">
             <ul class="navbar-nav mx-auto" dir="rtl">
                 <li class="nav-item  px-lg-4" id="searchstep">
-                    <a class="nav-link text-uppercase text-expanded fa fa-search" onclick='showAllPeople()'>جست و جو
+                    <a class="nav-link text-uppercase text-expanded " onclick='showAllPeople()'>جست و جو
                         <span class="sr-only ">(current)</span>
                     </a>
                 </li>
@@ -256,7 +273,7 @@
 
     <!--steps:-->
     <div class="container w3-display-topright" id="steps"
-         style="width:400px; height:30px; margin-right:-90px; padding:0px;">
+         style="width:400px; height:30px; margin-right:-90px; padding:0px; margin-top:20px;">
 
 
         <div class="row bs-wizard" style="border-bottom:0;">
@@ -297,7 +314,7 @@
     </div>
     <!--steps:-->
     <div class="container w3-display-topright" id="steps2"
-         style=" visibility:hidden; width:400px; height:30px; margin-right:-90px; padding:0px;">
+         style=" visibility:hidden; width:400px; height:30px; margin-right:-90px; padding:0px; margin-top:20px;">
 
 
         <div class="row bs-wizard" style="border-bottom:0;">
@@ -319,16 +336,16 @@
                     <div class="progress-bar"></div>
                 </div>
                 <a href="#" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center">محل چهره در تصویر را در صورت لزوم تغییر دهید</div>
+                <div class="bs-wizard-info text-center">یک نام جهت ثبت در دیتابیس وارد و ارسال کنید</div>
             </div>
 
             <div class="col-xs-3 bs-wizard-step disabled" id="step3"><!-- complete -->
-                <div class="text-center bs-wizard-stepnum">افزودن</div>
+                <div class="text-center bs-wizard-stepnum">نتیجه</div>
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
                 <a href="#" class="bs-wizard-dot"></a>
-                <div class="bs-wizard-info text-center">برای افزودن تصویر به دیتابیس یک نام انتخاب کنید</div>
+                <div class="bs-wizard-info text-center">\</div>
             </div>
 
 
@@ -339,7 +356,7 @@
 
     <div class="   w3-display-right" id="detecticons" style=" margin-right:100px;">
 
-        <label for="file-input" style="margin-top:40px;">
+        <label for="file-input" style="margin-top:70px;">
             <img class="zoom" src="/static/icons/gallery.png" style="width:50px; height:50px; margin:10px;"
                  onclick="hidegallery()"/>
         </label>
@@ -352,10 +369,10 @@
              onclick='hidecamera();'>
         <p>افزودن عکس از دوربین</p>
         <div style="visibility:hidden;" id="detectstep1">
-        <img id="" class="zoom js-open" src="/static/icons/detect.png"
+        <img  class="zoom js-open" src="/static/icons/detect.png"
              style="width:50px; height:50px; margin:10px; "
              onclick='detect();'>
-        <p>پردازش تصویر</p>
+        <p>برش تصویر</p>
 
         </div>
 

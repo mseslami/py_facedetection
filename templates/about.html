@@ -12,14 +12,31 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+    body{
+ background: rgb(41, 54, 61);  }
 
+        @font-face {
+        font-family: "irannastaligh";
+        src: url(/static/IranNastaliq-Web.ttf);
+}
+* {
+     font-family: "irannastaligh";
+            font-size: 20px;
+
+
+}
+
+
+
+    </style>
 </head>
 
 <body>
 
 <div id="particles-js"
-     style=" background: rgba(106,123,146, 1);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
+     style=" background:rgb(41, 54, 61);  height:100vh; width:100%;  position: absolute; top: 0; bottom: 0; z-index:0;">
 </div>
 <!-- scripts for net background :) -->
 <script src="static/netBackground/particles.js"></script>
@@ -28,7 +45,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-2 " id="mainNav"
-     style="background-color:rgba(44,66,77,0.6); margin-top:30px;">
+     style="background-color:rgba(255, 255, 255,0.8); margin-top:30px;">
     <div class="container ">
         <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -37,20 +54,27 @@
         </button>
         <div class="collapse navbar-collapse w3-display-middle" id="navbarResponsive">
             <ul class="navbar-nav mx-auto" dir="rtl">
-                <li class="nav-item  px-lg-4 " >
-                    <a class="nav-link text-uppercase text-expanded" href="index">خانه
+                <li class="nav-item  px-lg-4 active">
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;    " href="index">خانه
 
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item  px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="detect">پردازش چهره</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;  " href="detect">پردازش
+                        چهره</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="products">معرفی محصول</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;    "
+                       href="products">معرفی محصول</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded active" href="about">درباره ما</a>
+                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';" style="color:black;   " href="about">درباره
+                        ما</a>
                 </li>
 
             </ul>
@@ -61,19 +85,32 @@
 <section class="page-section about-heading  cta">
     <div class="container">
         <div class="about-heading-content">
-            <div class="row" >
+            <div class="row">
                 <div class="col-xl-9 col-lg-10 mx-auto" style="background-color:rgba(255,255,255,0.7); padding:20px;">
                     <div class="bg-faded rounded p-5" dir="rtl" align="right">
-                        <h2 class="section-heading mb-4" >
-                            <span class="section-heading-lower">مرکز تخصصی آپا</span>
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-lower" style="font-size:35px;">مرکز تخصصی آپا</span>
                             <span class="section-heading-upper">دانشگاه قم</span>
                         </h2>
-                        <p>
+                        <p style="    line-height: 1.8;">
 
 
-                    مركز تخصصي آپاي دانشگاه قمi، روز ۱۲ بهمن ماه ۹۴، با حضور محمود واعظي وزير ارتباطات و حجت الاسلام و المسلمين دكتر ديرباز رئيس دانشگاه قم، رستمي معاون توسعه مديريت و منابع انساني استانداري قم و جمعي از معاونان و مديران وزارت ارتباطات مورد بهره برداري قرار گرفت. این مرکز در قم، انتهای بلوار الغدیر، دانشگاه قم، کتابخانه مرکزی، طبقه اول واقع شده است. شماره تماس این مرکز ۰۲۵۳۲۱۰۳۳۸۹ و ایمیل  apa@qom.ac.ir می باشد.
-  	مركز تخصصي آپاي دانشگاه قم در زمينه آگاهي، آمادگي، پشتيباني و اقدام در حوزه سايبري فعاليت مي كند كه با همكاري وزارت ارتباطات و مركز فناوري اطلاعات ايران مورد بهره برداري قرار گرفت. بخش هاي مختلفي نظير گروه آگاهي، گروه اقدام، گروه آمادگي، گروه ‌پشتیباني، كارگروه هاي فقه و حقوق و كارگروه امنيت سايبري در اين مركز فعال هستند.
- 	«آپا » مخفف واژه‌هاي آگاهي‌،آمادگی، پشتيباني و اقدام و نشان‌دهنده نوع فعاليت‌ها و خدماتي است كه در حوزه امنيت شبكه‌هاي رايانه‌اي و سامانه‌هاي نرم‌افزاري در اين آزمايشگاه تخصصي ارائه مي‌شود. آزمايشگاه آپا دانشگاه قم از سال ۱۳۹۴ راه‌اندازي شده است كه در بستر فعاليت‌هاي آن، اعضاي هيات ‌علمي، كارشناسان ارشد و كارشناسان حوزه امنيت با اين آزمايشگاه همكاري دارند. فعاليت‌هاي آپاي دانشگاه قم، گستره گوناگوني را از ارزيابي امنيتي و آزمون نفوذپذيري شبكه‌ها و سامانه‌ها، و آگاهي‌رساني و آموزش‌هاي تخصصي تا عضويت در كميته‌ها و كارگروه‌هاي تخصصي در استان و اظهار نظر كارشناسي در پرونده‌هاي قضايي شامل مي‌شود.
+                            مركز تخصصي آپاي دانشگاه قمi، روز ۱۲ بهمن ماه ۹۴، با حضور محمود واعظي وزير ارتباطات و حجت
+                            الاسلام و المسلمين دكتر ديرباز رئيس دانشگاه قم، رستمي معاون توسعه مديريت و منابع انساني
+                            استانداري قم و جمعي از معاونان و مديران وزارت ارتباطات مورد بهره برداري قرار گرفت. این مرکز
+                            در قم، انتهای بلوار الغدیر، دانشگاه قم، کتابخانه مرکزی، طبقه اول واقع شده است. شماره تماس
+                            این مرکز ۰۲۵۳۲۱۰۳۳۸۹ و ایمیل apa@qom.ac.ir می باشد.
+                            مركز تخصصي آپاي دانشگاه قم در زمينه آگاهي، آمادگي، پشتيباني و اقدام در حوزه سايبري فعاليت مي
+                            كند كه با همكاري وزارت ارتباطات و مركز فناوري اطلاعات ايران مورد بهره برداري قرار گرفت. بخش
+                            هاي مختلفي نظير گروه آگاهي، گروه اقدام، گروه آمادگي، گروه ‌پشتیباني، كارگروه هاي فقه و حقوق
+                            و كارگروه امنيت سايبري در اين مركز فعال هستند.
+                            «آپا » مخفف واژه‌هاي آگاهي‌،آمادگی، پشتيباني و اقدام و نشان‌دهنده نوع فعاليت‌ها و خدماتي است
+                            كه در حوزه امنيت شبكه‌هاي رايانه‌اي و سامانه‌هاي نرم‌افزاري در اين آزمايشگاه تخصصي ارائه
+                            مي‌شود. آزمايشگاه آپا دانشگاه قم از سال ۱۳۹۴ راه‌اندازي شده است كه در بستر فعاليت‌هاي آن،
+                            اعضاي هيات ‌علمي، كارشناسان ارشد و كارشناسان حوزه امنيت با اين آزمايشگاه همكاري دارند.
+                            فعاليت‌هاي آپاي دانشگاه قم، گستره گوناگوني را از ارزيابي امنيتي و آزمون نفوذپذيري شبكه‌ها و
+                            سامانه‌ها، و آگاهي‌رساني و آموزش‌هاي تخصصي تا عضويت در كميته‌ها و كارگروه‌هاي تخصصي در استان
+                            و اظهار نظر كارشناسي در پرونده‌هاي قضايي شامل مي‌شود.
                         </p>
 
                     </div>
@@ -93,8 +130,9 @@
         <div class="w3-col s4 w3-center  ">
             <div id="googleMap" style="width:300px;height:200px; padding:10px; margin:10px;"></div>
         </div>
-        <div class="w3-col s4    container w3-card w3-center" dir="rtl" style="padding:10px; background-color:rgba(222,222,222,0.6);">
-            <p><i class="fa fa-map-marker fa-fw w3-large w3-margin-right "></i> آدرس: قم، انتهای بلوار الغدیر،
+        <div class="w3-col s4    container w3-card w3-center" dir="rtl"
+             style="padding:10px; background-color:rgba(222,222,222,0.6);">
+            <p><i class="fa fa-map-marker fa-fw w3-large w3-margin-right " style="padding-top:10px;"></i> آدرس: قم، انتهای بلوار الغدیر،
                 دانشگاه
                 قم، کتابخانه مرکزی، طبقه اول، دفتر مرکز تخصصی آپای دانشگاه قم
 
@@ -119,12 +157,12 @@
         </div>
         <div class="w3-col s4 w3-center " dir="rtl">
             <form action="/action_page.php" target="_blank">
-                <p><input class="w3-input w3-border w3-animate-input"   type="text" placeholder="نام و نام خانوادگی"
-                          required name="Name" style="width:80%;  max-width:90%; height:30px;"></p>
+                <p><input class="w3-input w3-border w3-animate-input"  type="text" placeholder="نام و نام خانوادگی"
+                          required name="Name" style="font-size:13px; width:80%;  max-width:90%; height:30px;"></p>
                 <p><input class="w3-input w3-border w3-animate-input" type="email" placeholder="ایمیل" required
-                          name="Email" style="width:80%;  max-width:90%; height:30px;"></p>
+                          name="Email" style="font-size:13px; width:80%;  max-width:90%; height:30px;"></p>
                 <p><input class="w3-input w3-border w3-animate-input" type="text" placeholder="موضوع" required
-                          name="Subject" style="width:80%;  max-width:90%; height:30px;"></p>
+                          name="Subject" style="font-size:13px; width:80%;  max-width:90%; height:30px;"></p>
                 <p><textarea class="w3-input w3-border w3-animate-input" placeholder="پیام " required name="Message"
                              style="height:100px; width:80%;  max-width:90%;"></textarea></p>
                 <p>
@@ -196,6 +234,9 @@ function w3_close() {
 
 
 
+
+
+
 </script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>-->
 <script src="https://maps.googleapis.com/maps/api/js?language=fa&key=AIzaSyAKefvkV0v696yGIlPgh2fzLw3ohN982U0&callback=myMap"></script>
@@ -253,6 +294,9 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+
+
+
 
 
 
