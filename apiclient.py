@@ -49,7 +49,7 @@ def get_One_Face(userid):
 def post_To_Detect():
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/userimage.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -88,7 +88,7 @@ def post_To_Detect():
 def post_To_Insert(username):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/userimage.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -130,14 +130,14 @@ def array_To_Image(cols, name):
 
     # Use PIL to create an image from the new array of pixels
     new_image = Image.fromarray(array)
-    new_image.save(name + '.jpg')
+    new_image.save('static/'+name + '.jpg')
     print("image saved :)")
 
 
 def post_To_Recognize(indexdict):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/userimage.jpg')
+    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/userimage.jpg')
     pix = im.load()
     x, y = im.size
 

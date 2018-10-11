@@ -149,6 +149,8 @@
 
 
 
+
+
     </style>
 
 </head>
@@ -205,16 +207,16 @@
         </button>
         <div class="collapse navbar-collapse w3-display-middle" id="">
             <ul class="navbar-nav mx-auto" dir="rtl">
-                <li class="nav-item  px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded fa fa-search" href="index">جست و جو
+                <li class="nav-item  px-lg-4" id="searchstep">
+                    <a class="nav-link text-uppercase text-expanded fa fa-search" onclick='showAllPeople()'>جست و جو
                         <span class="sr-only ">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="detect">پردازش چهره</a>
+                <li class="nav-item active px-lg-4" id="detectstep">
+                    <a class="nav-link text-uppercase text-expanded" onclick="detectview();">پردازش چهره</a>
                 </li>
-                <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="products">افزودن چهره</a>
+                <li class="nav-item px-lg-4" id="insertstep">
+                    <a class="nav-link text-uppercase text-expanded" onclick="insertview();">افزودن چهره</a>
 
             </ul>
         </div>
@@ -222,39 +224,20 @@
 </nav>
 
 
+<div id="step2div" style="position: absolute;  visibility: hidden; ">
 
 
-    <div id="step2div" style="position: absolute;  visibility: hidden; ">
-        <div id="detecticon" class="zoom"
-             style=" "
-             onclick="detect()">
-            <img src="/static/icons/next.png" style="width:40px; height:40px;"/>
-            <img src="/static/icons/detect.png" style="width:40px; height:40px;"/>
-            <p>جست و جوی فرد</p>
-        </div>
-
-        <br>
-        <div id="cropicon" class="zoom"
-             style="    "
-             onclick="callCropper()">
-            <img src="/static/icons/next.png" style="width:40px; height:40px;"/>
-            <img src="/static/icons/crop.png" style="width:40px; height:40px;"/>
-            <p>برش تصویر</p>
-        </div>
-        <br>
-
-        <div id="inserticon" class="zoom"
-             style="    "
-             onclick="    document.getElementById('inputnamediv').style.visibility = 'visible';
+    <div id="inserticon" class="zoom"
+         style="    "
+         onclick="    document.getElementById('inputnamediv').style.visibility = 'visible';
                         document.getElementById('search view').style.visibility = 'hidden';  document.getElementById('myInput').style.visibility = 'hidden'; ">
-            <img src="/static/icons/next.png" style="width:40px; height:40px;"/>
-            <img src="/static/icons/database.png" style="width:40px; height:40px;"/>
-            <p>اضافه کردن به دیتابیس</p>
-        </div>
-
+        <img src="/static/icons/next.png" style="width:40px; height:40px;"/>
+        <img src="/static/icons/database.png" style="width:40px; height:40px;"/>
+        <p>اضافه کردن به دیتابیس</p>
     </div>
-</div>
 
+</div>
+</div>
 
 
 <div id="loadview"
@@ -269,53 +252,95 @@
 
 
 <div class="py-lg-2  w3-display-topmiddle"
-     style="visibility:visible; width:1100px;  height:500px;  margin-top:130px; background-color:rgba(169,249,239 ,0.7); ">
+     style="visibility:visible; width:1100px;  height:500px;  margin-top:130px; background-color:rgba(219,299,289 ,0.7); ">
 
-<!--steps:-->
-<div class="container w3-display-topright" style="width:400px; height:30px; margin-right:-90px; padding:0px;">
-
-
-    <div class="row bs-wizard" style="border-bottom:0;">
+    <!--steps:-->
+    <div class="container w3-display-topright" id="steps"
+         style="width:400px; height:30px; margin-right:-90px; padding:0px;">
 
 
-        <div class="col-xs-3 bs-wizard-step complete">
-            <div class="text-center bs-wizard-stepnum">انتخاب تصویر</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
+        <div class="row bs-wizard" style="border-bottom:0;">
+
+
+            <div class="col-xs-3 bs-wizard-step complete" id="step1">
+                <div class="text-center bs-wizard-stepnum">انتخاب تصویر</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="bs-wizard-dot"></a>
+
+                <div class="bs-wizard-info text-center">از طریق وب کم یا فایل های موجود یک عکس اضافه کنید</div>
             </div>
-            <a href="#" class="bs-wizard-dot"></a>
 
-            <div class="bs-wizard-info text-center">از طریق وب کم یا فایل های موجود یک عکس اضافه کنید</div>
+            <div class="col-xs-3 bs-wizard-step disabled" id="step2"><!-- complete -->
+                <div class="text-center bs-wizard-stepnum">برش تصویر</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="bs-wizard-dot"></a>
+                <div class="bs-wizard-info text-center"> محل چهره در تصویر را انتخاب و ارسال کنید</div>
+            </div>
+
+            <div class="col-xs-3 bs-wizard-step disabled" id="step3"><!-- complete -->
+                <div class="text-center bs-wizard-stepnum">نتیجه</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="bs-wizard-dot"></a>
+                <div class="bs-wizard-info text-center"></div>
+            </div>
+
+
         </div>
 
-        <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-            <div class="text-center bs-wizard-stepnum">برش تصویر</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="#" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">محل چهره در تصویر را در صورت لزوم تغییر دهید</div>
-        </div>
 
-        <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-            <div class="text-center bs-wizard-stepnum">پردازش تصویر</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
+    </div>
+    <!--steps:-->
+    <div class="container w3-display-topright" id="steps2"
+         style=" visibility:hidden; width:400px; height:30px; margin-right:-90px; padding:0px;">
+
+
+        <div class="row bs-wizard" style="border-bottom:0;">
+
+
+            <div class="col-xs-3 bs-wizard-step complete" id="step1">
+                <div class="text-center bs-wizard-stepnum">انتخاب تصویر</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="bs-wizard-dot"></a>
+
+                <div class="bs-wizard-info text-center">از طریق وب کم یا فایل های موجود یک عکس اضافه کنید</div>
             </div>
-            <a href="#" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">تصویر را جهت پردازش ارسال کنید</div>
+
+            <div class="col-xs-3 bs-wizard-step disabled" id="step2"><!-- complete -->
+                <div class="text-center bs-wizard-stepnum">برش تصویر</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="bs-wizard-dot"></a>
+                <div class="bs-wizard-info text-center">محل چهره در تصویر را در صورت لزوم تغییر دهید</div>
+            </div>
+
+            <div class="col-xs-3 bs-wizard-step disabled" id="step3"><!-- complete -->
+                <div class="text-center bs-wizard-stepnum">افزودن</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="#" class="bs-wizard-dot"></a>
+                <div class="bs-wizard-info text-center">برای افزودن تصویر به دیتابیس یک نام انتخاب کنید</div>
+            </div>
+
+
         </div>
 
 
     </div>
 
+    <div class="   w3-display-right" id="detecticons" style=" margin-right:100px;">
 
-</div>
-
-     <div  class="   w3-display-right" id="" style="margin-right:100px;">
-
-        <label for="file-input" style="">
-            <img class="zoom" src="/static/icons/gallery.png" style="width:70px; height:70px; margin:10px;"
+        <label for="file-input" style="margin-top:40px;">
+            <img class="zoom" src="/static/icons/gallery.png" style="width:50px; height:50px; margin:10px;"
                  onclick="hidegallery()"/>
         </label>
         <p>افزودن فایل موجود</p>
@@ -323,15 +348,39 @@
         <input id="file-input" type='file' accept='image/*' style="display: none;" onchange='openFile(event)'>
 
         <img id="show" class="zoom js-open" src="/static/icons/camera.png"
-             style="width:70px; height:70px; margin:10px;"
+             style="width:50px; height:50px; margin:10px;"
              onclick='hidecamera();'>
         <p>افزودن عکس از دوربین</p>
+        <div style="visibility:hidden;" id="detectstep1">
+        <img id="" class="zoom js-open" src="/static/icons/detect.png"
+             style="width:50px; height:50px; margin:10px; "
+             onclick='detect();'>
+        <p>پردازش تصویر</p>
 
+        </div>
+
+    </div>
+    <div class="   w3-display-right" id="detecticonsbtn"
+         style="margin-right:100px; font-size:24px;  visibility:hidden;">
+        <div class="w3-round-large w3-button w3-white"
+             style=" padding:5px; "
+             onclick="detect()">
+            <img src="/static/icons/detect.png" style=" display:inline;width:40px; height:40px;"/>
+            <p style="display:inline;"> جست و جو</p>
+        </div>
+    </div>
+    <div class="   w3-display-right" id="startagain" style="margin-right:100px; visibility:hidden;"
+         onclick="detectview();">
+        <div class="w3-round-large w3-button w3-white"
+             style=" padding:5px; ">
+            <p class="fa fa-refresh" style=" display:inline; font-size:24px; "> شروع دوباره</p>
+
+        </div>
     </div>
 
     <div id="galleryholder" class="w3-container w3-card"
-         style=" background-color: rgba(86,113,126, 0.5); margin-left:30px; margin-top:20px; width: 650px; height:450px;    position: absolute; left:10px; ">
-
+         style=" background-color: rgba(255,255,255, 0.5); margin-left:30px; margin-top:20px; width: 650px; height:450px;    position: absolute; left:10px; ">
+<!--rgba(86,113,126, 0.5)-->
         <img id="deleteimg" class="zoom" src="/static/icons/delete.png"
 
              style="width:30px; height:30px;   z-index:5;position: absolute; top:10px; right:10px;" onclick="destroy()">
@@ -412,9 +461,13 @@ function myFunction() {
 
 
 
+
+
         </script>
 
     </div>
+    <div style="margin-left:400px; margin-top:50px; backgorund:red; visibility:hidden;" id="userimagediv">
+        <img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg"></div>
 
 
 </div>
@@ -449,7 +502,6 @@ console.log("destory is being called");
     document.getElementById("camerataker").style.visibility = "hidden";
     document.getElementById("cameraShow").style.visibility = "hidden";
 
-    document.getElementById("detecticon").style.visibility = "hidden";
     document.getElementById("inserticon").style.visibility = "hidden";
     document.getElementById("step2div").style.visibility = "hidden";
 
@@ -457,6 +509,8 @@ console.log("destory is being called");
 
 
     }
+
+
 
 
 
@@ -482,6 +536,14 @@ console.log("destory is being called");
         document.getElementById("inputnamediv").style.visibility = "hidden";
         document.getElementById('search view').style.visibility = 'visible';
         document.getElementById('galleryholder').style.visibility = 'hidden';
+        document.getElementById('steps').style.visibility = 'hidden';
+        document.getElementById('steps2').style.visibility = 'hidden';
+        document.getElementById('detecticons').style.visibility = 'hidden';
+
+        document.getElementById("searchstep").classList.add('active');
+    document.getElementById("detectstep").classList.remove('active');
+    document.getElementById("insertstep").classList.remove('active');
+
 
 
 
@@ -533,6 +595,9 @@ for(var i in indexes) {
 <!--adding existing file:-->
   var openFile = function(file) {
     var input = file.target;
+
+    document.getElementById("detectstep1").style.visibility = "visible";
+
 
     var reader = new FileReader();
     reader.onload = function(){
@@ -605,14 +670,19 @@ var indexes;
 $.get("/getmethodrecognize", function(data) {
     indexes = $.parseJSON(data)
     console.log(indexes,"\n this is indexes")
-        <!--document.getElementById("detecticon").style.visibility = "hidden";-->
     document.getElementById("loadview").style.visibility = "hidden";
     document.getElementById("search view").style.visibility = "visible";
+    document.getElementById("userimagediv").style.visibility = "visible";
+    document.getElementById("startagain").style.visibility = "visible";
     document.getElementById("galleryholder").style.visibility = "hidden";
+    document.getElementById("detecticonsbtn").style.visibility = "hidden";
     document.getElementById("croppr").style.visibility = "hidden";
 
+    document.getElementById("step3").classList.add('complete');
+    document.getElementById("step3").classList.remove('disabled');
+
+
     document.getElementById("inserticon").style.visibility = "hidden";
-    document.getElementById("detecticon").style.visibility = "hidden";
     document.getElementById("myInput").style.display= "none";
     $("#galleryholder").empty();
 
@@ -651,6 +721,8 @@ for(var i in indexes) {
 <!--//////////////////////////////////////////////////////-->
 <!--//////////////////////////////////////////////////////-->
 <!--//////////////////////////////////////////////////////-->
+
+
 
 
 
@@ -738,6 +810,8 @@ function opencamera(){
 
 
 
+
+
 </script>
 <script language="Javascript">
 
@@ -802,6 +876,8 @@ var indexes = {
 
 
 
+
+
 </script>
 
 <!--image cropper-->
@@ -822,9 +898,13 @@ console.log("photo is being created")
 $.get("/getmethodyy", function(data) {
     indexes = $.parseJSON(data)
     console.log("this is indexes:", indexes)
-    document.getElementById("detecticon").style.visibility = "visible";
-    document.getElementById("inserticon").style.visibility = "visible";
+    document.getElementById("detecticonsbtn").style.visibility = "visible";
+    document.getElementById("detectstep1").style.visibility = "hidden";
     document.getElementById("loadview").style.visibility = "hidden";
+    document.getElementById("detecticons").style.visibility = "hidden";
+    document.getElementById("step2").classList.add('complete');
+    document.getElementById("step2").classList.remove('disabled');
+
     facecounter = 0;
     facelen = indexes.length;
     console.log(facelen);
@@ -900,6 +980,36 @@ $.get("/getmethodyy", function(data) {
 
 
 
+function detectview(){
+        document.getElementById('search view').style.visibility = 'hidden';
+        document.getElementById('startagain').style.visibility = 'hidden';
+        document.getElementById('userimagediv').style.visibility = 'hidden';
+        document.getElementById('galleryholder').style.visibility = 'visible';
+        document.getElementById('steps2').style.visibility = 'hidden';
+        document.getElementById('steps').style.visibility = 'visible';
+        document.getElementById('detecticons').style.visibility = 'visible';
+        document.getElementById("myInput").style.display= "none";
+
+        document.getElementById("searchstep").classList.remove('active');
+    document.getElementById("detectstep").classList.add('active');
+    document.getElementById("insertstep").classList.remove('active');
+
+
+}
+function insertview(){
+        document.getElementById('search view').style.visibility = 'hidden';
+        document.getElementById('galleryholder').style.visibility = 'visible';
+        document.getElementById('steps2').style.visibility = 'visible';
+        document.getElementById('steps').style.visibility = 'hidden';
+        document.getElementById('detecticons').style.visibility = 'visible';
+        document.getElementById("myInput").style.display= "none";
+
+    document.getElementById("searchstep").classList.remove('active');
+    document.getElementById("detectstep").classList.remove('active');
+    document.getElementById("insertstep").classList.add('active');
+
+}
+
 
 
 
@@ -933,7 +1043,6 @@ $.get("/getmethodyy", function(data) {
     dataType: "json",
     success: function(response) {
         console.log(response);
-    document.getElementById("detecticon").style.visibility = "visible";
     document.getElementById("inserticon").style.visibility = "visible";
     document.getElementById("loadview").style.visibility = "hidden";
 
@@ -946,6 +1055,8 @@ $.get("/getmethodyy", function(data) {
 
 
     }
+
+
 
 
 
@@ -984,6 +1095,8 @@ closeButton.addEventListener('click', () => {
 
 
 })
+
+
 
 
 

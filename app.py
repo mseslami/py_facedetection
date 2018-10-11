@@ -79,7 +79,7 @@ def get_post_json():
         print("you are in step 1")
         import urllib
         resource = urllib.request.urlopen(data["hi"])
-        output = open("userimage.jpg", "wb")
+        output = open("static/userimage.jpg", "wb")
         output.write(resource.read())
         output.close()
 
