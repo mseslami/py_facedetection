@@ -14,6 +14,8 @@ from project import users_blueprint
 app = Flask(__name__)
 
 app.config["CACHE_TYPE"] = "null"
+
+
 # change to "redis" and restart to cache again
 
 # # some time later
@@ -21,50 +23,39 @@ app.config["CACHE_TYPE"] = "null"
 
 class cropindex():
     new_dict = dict()
+
+
 class userimgname():
     userimagename = ""
+
 
 # @app.route('/hi/<user>')
 # def hi_name(user):
 #     return render_template('base.html', name=user)
-@app.route('/net')
-def net():
-    return render_template('base5.html')
+
 @app.route('/detect')
 def detect():
     return render_template('detect2.html')
+
+
 @app.route('/products')
 def products():
     return render_template('products.html')
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
 @app.route('/index')
 def index():
     return render_template('index.html')
 
-#
-# @app.route('/hey/<name>')
-# def hello_name(name):
-#     return "Hello {}!".format(name)
-#
 
-# @app.route('/')
-# def crop_layout():
-#     return render_template('base.html')
-
-
-# @app.route('/')
-# def crop_layout2():
-#     # if request.method == 'POST':
-#     #     print("ssssssssssssssssssssssssssss")
-#     #     print(request.request.form.get('json_data', None))
-#     # the_json = request.request.form.get('json_data', None)
-#     # this template simply prints it out and all that I get is b"
-#     # return render_template('base2.html', the_json=the_json)
-#     out = {"a": "b", "c": "d"}
-#
-#     return render_template('base3.html', value=out)  # ,value=a
+@app.route('/')
+def index2():
+    return render_template('index.html')
 
 
 @app.route('/_get_post_json/', methods=['POST', 'GET'])
@@ -74,7 +65,7 @@ def get_post_json():
     print(staticmethod, "method is sssssssssssss")
     data = request.get_json()
     print("ourdata is :", data["hi"])
-    if data["hello"]=="world":
+    if data["hello"] == "world":
         print("you are in step 1")
         # remove userimage:
         import os
@@ -86,24 +77,20 @@ def get_post_json():
         import urllib
         import uuid
         userimgname.userimagename = uuid.uuid4().hex
-        print("image name : ",userimgname.userimagename)
+        print("image name : ", userimgname.userimagename)
         resource = urllib.request.urlopen(data["hi"])
-        output = open("static/"+userimgname.userimagename+".jpg", "wb")
+        output = open("static/" + userimgname.userimagename + ".jpg", "wb")
         output.write(resource.read())
         output.close()
 
-    elif data["hello"]=="world2":
+    elif data["hello"] == "world2":
         print("you are in step 2")
-        print(data["hi"],'ddddddddddddddd')
+        print(data["hi"], 'ddddddddddddddd')
         cropindex.new_dict = data["hi"]
-    elif data["hello"] =="insertname":
-        post_To_Insert(data["hi"],userimgname.userimagename)
+    elif data["hello"] == "insertname":
+        post_To_Insert(data["hi"], userimgname.userimagename)
 
     return flask.jsonify(status="success", data=data)
-
-
-
-
 
 
 @app.route('/getmethodyy')
@@ -114,20 +101,13 @@ def report():
     # return Response('this is a sample response')
     return json.dumps(out)
 
-# @app.route('/getmethodinsert')
-# def reportinsert():
-#     out = post_To_Insert()
-#     print(out)
-#     return json.dumps(out)
-
 
 @app.route('/getmethodrecognize')
 def recognize():
-    out = post_To_Recognize(cropindex.new_dict,userimgname.userimagename)
-    out2 = {"userimagename":userimgname.userimagename, "recog":out}
+    out = post_To_Recognize(cropindex.new_dict, userimgname.userimagename)
+    out2 = {"userimagename": userimgname.userimagename, "recog": out}
     print(out2, "\n this is id list")
     return json.dumps(out2)
-
 
 
 @app.route('/getmethodallpeople')
@@ -141,11 +121,6 @@ def oneFace(userid):
     onefacelist = get_One_Face(userid)
     return json.dumps(onefacelist)
 
-
-# @app.route('/getmethodsomeonephoto')
-# def oneFaceLenght():
-#     out = get_One_Face(userid)
-#     return json.dumps(out)
 
 if __name__ == '__main__':
     app.run()

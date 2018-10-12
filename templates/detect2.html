@@ -46,7 +46,7 @@ body{
   margin-bottom: 12px;
 }
 
-#myUL {
+#myUL , #myUL2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -136,6 +136,7 @@ body{
 .bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
 /*END Form Wizard*/
+
 
 
 
@@ -413,8 +414,8 @@ body{
     <div class="   w3-display-right" id="startagain" style="margin-right:100px; visibility:hidden;"
          onclick="detectview(); startagain();">
         <div class="w3-round-large w3-button w3-white"
-             style=" padding:5px; ">
-            <p class="fa fa-refresh" style=" display:inline; font-size:24px; "> شروع دوباره</p>
+             style="  width:300px ; padding-top:20px; margin-bottom:40px;">
+            <p class="" style=" display:inline; font-size:24px; "> شروع دوباره</p>
 
         </div>
     </div>
@@ -445,7 +446,8 @@ body{
         <!--<ul id="myUL">-->
         <!--<li><a href="#">Cindy</a></li>-->
         <!--</ul>-->
-        <div id="allpeoplelist"></div>
+        <div id="allpeoplelist">
+        </div>
 
         <div aria-orientation="horizontal" id="inputnamediv" style="visibility:hidden">
             <input type="text" id="inputname" onkeyup="" placeholder="enter face name..."
@@ -456,27 +458,10 @@ body{
         <script>
 
 
-
-<!--function myFunction() {-->
-<!--console.log("myfuncion");-->
-    <!--var input, filter, ul, li, a, i;-->
-    <!--input = document.getElementById("myInput");-->
-    <!--filter = input.value.toUpperCase();-->
-    <!--ul = document.getElementById("#myUL");-->
-    <!--console.log(ul);-->
-    <!--li = ul.getElementsByTagName("li");-->
-    <!--for (i = 0; i < li.length; i++) {-->
-        <!--a = li[i].getElementsByTagName("a")[0];-->
-        <!--if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {-->
-            <!--li[i].style.display = "";-->
-        <!--} else {-->
-            <!--li[i].style.display = "none";-->
-        <!--}-->
-    <!--}-->
-<!--}-->
 function myFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
+    console.log('your input is :', input);
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
@@ -494,28 +479,30 @@ function myFunction() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </script>
 
     </div>
-    <div style="margin-left:400px; margin-top:50px; backgorund:red; visibility:hidden;" id="userimagediv">
-        <!--<img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg">-->
+    <div id="search view2" class="w3-container w3-card"
+         style=" background-color:rgba(255,211,181,,0.7); width:330px; height:450px; margin-left:30px; margin-top:20px;  position: absolute; right:300px; visibility:hidden;">
+
+        <div class="w3-round-large  w3-white"  style="margin-top:10px;width:300px ; height:50px; margin-bottom:20px;     text-align: center; padding-top:15px;">
+            <p id="showfacename"> </p>
+        </div>
+
+
+        <!--<ul id="myUL">-->
+        <!--<li><a href="#">Cindy</a></li>-->
+        <!--</ul>-->
+        <div id="allpeoplelist2">
+        </div>
+
+
     </div>
+
+</div>
+<div style="margin-left:400px; margin-top:50px; backgorund:red; visibility:hidden;" id="userimagediv">
+    <!--<img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg">-->
+</div>
 
 
 </div>
@@ -557,6 +544,7 @@ console.log("destory is being called");
 
 
     }
+
 
 
 
@@ -686,31 +674,34 @@ for(var i in indexes) {
     function showPerson(i){
     console.log("person's name is: ", i);
     document.getElementById("loadview").style.visibility = "visible";
+             $('#showfacename').text(i);
+
 
 var indexes;
 
 $.get("/getOneFace/"+i, function(data) {
     document.getElementById("loadview").style.visibility = "hidden";
+    document.getElementById("search view2").style.visibility = "visible";
 
-    indexes = $.parseJSON(data)
-    console.log('this is result of one face data')
-    console.log(indexes.length)
-    console.log(indexes)
-$("#allpeoplelist").empty();
 
-$("#myUL").empty();
-$(".searchli").empty();
 
-$("#allpeoplelist").append("<ul id='myUL'></ul>");
+    indexes = $.parseJSON(data);
+    console.log('this is result of one face data');
+    console.log(indexes.length);
+    console.log(indexes);
+$("#allpeoplelist2").empty();
+
+$("#myUL2").empty();
+<!--$(".searchli").empty();-->
+
+$("#allpeoplelist2").append("<ul id='myUL2'></ul>");
+
 
 for(var i =0; i<indexes.length; i++) {
     console.log(indexes[i]);
     var li = '<li  class="searchli" >';
     console.log("eachphoto"+(i)+".png");
-    <!--$("#myUL").append(li.concat('<img src="static/eachphoto/eachphoto'+ i +'.png" style="width:100px; height:100px;" >'));-->
-
-    <!--$("#myUL").append('<li class="searchli"><img src="static/eachphoto/eachphoto'+ i +'.png" style="width:100px; height:100px;  background-image: url("static/eachphoto/eachphoto'+ i +'.png" ) !important;" ></li>');-->
-    $("#myUL").append('<li class="searchli"><img src="static/eachphoto/'+ indexes[i] +'.png" style="width:100px; height:100px; ;" ></li>');
+    $("#myUL2").append('<li class="searchli"><img src="static/eachphoto/'+ indexes[i] +'.png" style="width:100px; height:100px; ;" ></li>');
 
 }
 
@@ -826,6 +817,7 @@ for(var i in indexes) {
 
 
 
+
 </script>
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
@@ -893,6 +885,7 @@ function opencamera(){
 
 
 
+
 </script>
 <script language="Javascript">
 
@@ -931,6 +924,7 @@ var indexes = {
 
 
   };
+
 
 
 
@@ -1125,6 +1119,7 @@ function startagain(){
 
 
 
+
 </script>
 <script>
     function callInserter(){
@@ -1180,6 +1175,7 @@ function startagain(){
 
 
 
+
 </script>
 <script>
   const dialog = document.querySelector('.js-dialog')
@@ -1200,6 +1196,7 @@ closeButton.addEventListener('click', () => {
 
 
 })
+
 
 
 

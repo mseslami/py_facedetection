@@ -14,6 +14,7 @@ def get_All_Faces():
     # extracting data in json format
     allfaces = allfaceresponse.json()
 
+
     for item in allfaces:
         print(item)
 
@@ -60,7 +61,7 @@ def post_To_Detect(userimagename):
 
 
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/'+userimagename+'.jpg')
+    im = Image.open('static/'+userimagename+'.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -99,7 +100,7 @@ def post_To_Detect(userimagename):
 def post_To_Insert(username,userimagename):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/'+userimagename+'.jpg')
+    im = Image.open('static/'+userimagename+'.jpg')
     pix = im.load()
     print(im.size)  # Get the width and hight of the image for iterating over
     x, y = im.size
@@ -148,7 +149,7 @@ def array_To_Image(cols, name):
 def post_To_Recognize(indexdict,userimagename):
     from PIL import Image
 
-    im = Image.open('/home/maryam/PycharmProjects/facedetectionproject/static/'+userimagename+'.jpg')
+    im = Image.open('static/'+userimagename+'.jpg')
     pix = im.load()
     x, y = im.size
 

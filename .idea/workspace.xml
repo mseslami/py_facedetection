@@ -3,8 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="cb4492c8-d815-44ac-9a31-c1498740e4e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiclient.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiclient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icons/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/css/business-casual.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/css/business-casual.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.slim.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base5.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detect2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detect2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,47 +66,48 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="cfg" value="1" />
           <entry key="css" value="32" />
           <entry key="gif" value="3" />
-          <entry key="html" value="53" />
+          <entry key="html" value="64" />
           <entry key="jpg" value="64" />
           <entry key="js" value="50" />
           <entry key="json" value="5" />
           <entry key="map" value="1" />
           <entry key="png" value="105" />
-          <entry key="py" value="50" />
+          <entry key="py" value="52" />
           <entry key="rnc" value="1" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="32" />
-          <entry key="HTML" value="53" />
+          <entry key="HTML" value="64" />
           <entry key="Image" value="172" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="50" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="50" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="52" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="23" />
-          <entry key="html" value="18576" />
+          <entry key="html" value="18869" />
           <entry key="js" value="16" />
-          <entry key="py" value="4694" />
-          <entry key="txt" value="1939" />
+          <entry key="py" value="4708" />
+          <entry key="txt" value="1960" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="23" />
-          <entry key="HTML" value="18576" />
+          <entry key="HTML" value="18869" />
           <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="1939" />
-          <entry key="Python" value="4694" />
+          <entry key="PLAIN_TEXT" value="1960" />
+          <entry key="Python" value="4708" />
         </counts>
       </usages-collector>
     </session>
@@ -91,10 +117,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="108" column="24" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="24" />
+            <state relative-caret-position="103">
+              <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
               <folding>
-                <marker date="1539320517529" expanded="true" signature="615:640" ph="..." />
+                <element signature="e#1873#2999#0" />
+                <element signature="e#3457#3660#0" />
+                <marker date="1539325145249" expanded="true" signature="619:645" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,8 +131,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/detect2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="389" column="101" selection-start-line="389" selection-start-column="101" selection-end-line="389" selection-end-column="101" />
+            <state relative-caret-position="284">
+              <caret line="706" column="71" selection-start-line="706" selection-start-column="71" selection-end-line="706" selection-end-column="71" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
@@ -128,17 +156,24 @@
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#3;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#5;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#script#0;n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#7;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#dialog#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -155,13 +190,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiclient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="75">
+              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#154#395#0" />
               </folding>
             </state>
           </provider>
@@ -179,22 +222,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>برش تصویر</find>
-      <find>detect.png</find>
-      <find>detectstep1</find>
-      <find>showallp</find>
-      <find>post_to</find>
-      <find>new_dict</find>
-      <find>yy</find>
-      <find>cropindex</find>
-      <find>hi</find>
-      <find>userimgname</find>
-      <find>response</find>
       <find>userimagename</find>
       <find>getmethodrecognize</find>
       <find>startagain</find>
       <find>steps</find>
-      <find>جست و جو</find>
       <find>opencamera</find>
       <find>hidecamera</find>
       <find>camerataker</find>
@@ -206,9 +237,21 @@
       <find>callCropper</find>
       <find>befor</find>
       <find>callCropper();</find>
-      <find>post_to_det</find>
-      <find>افزودن</find>
       <find>موجود</find>
+      <find>post_to_det</find>
+      <find>127</find>
+      <find>detect</find>
+      <find>home</find>
+      <find>load</find>
+      <find>جست و جو</find>
+      <find>showAllPeople</find>
+      <find>showPerson</find>
+      <find>myul</find>
+      <find>افزودن</find>
+      <find>ul2</find>
+      <find>person</find>
+      <find>showfacename</find>
+      <find>showperson</find>
     </findStrings>
     <replaceStrings>
       <replace>static/vendor/</replace>
@@ -258,8 +301,8 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/products.html" />
         <option value="$PROJECT_DIR$/templates/about.html" />
-        <option value="$PROJECT_DIR$/apiclient.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/apiclient.py" />
         <option value="$PROJECT_DIR$/templates/detect2.html" />
       </list>
     </option>
@@ -282,23 +325,6 @@
             <path>
               <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="eachphoto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="facedetectionproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="nearface" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="facedetectionproject" type="b2602c69:ProjectViewProjectNode" />
@@ -646,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539276415514</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="camera problem solved">
+      <created>1539321996442</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1539321996442</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -662,12 +695,12 @@
     <frame x="0" y="-30" width="1366" height="798" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22257054" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15860015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3059163" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32611832" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3001443" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43243244" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -707,7 +740,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shows recognize list in html" />
     <MESSAGE value="saves each photo of someone which is selected in list" />
     <MESSAGE value="search view added" />
     <MESSAGE value="base3.html, new view created and improved;" />
@@ -732,7 +764,8 @@
     <MESSAGE value="ui improved. navigation changed in all pages" />
     <MESSAGE value="nastaliq font added with some changes in size and paddings and spaces" />
     <MESSAGE value="userimage saves in uniqu name and call by it in static folder ( problem of showing old photo solved)" />
-    <option name="LAST_COMMIT_MESSAGE" value="userimage saves in uniqu name and call by it in static folder ( problem of showing old photo solved)" />
+    <MESSAGE value="camera problem solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="camera problem solved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -749,12 +782,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/eachphoto/eachphoto2.png" />
-    <entry file="file://$PROJECT_DIR$/static/eachphoto/eachphoto3.png" />
-    <entry file="file://$PROJECT_DIR$/static/eachphoto/eachphoto4.png" />
-    <entry file="file://$PROJECT_DIR$/static/eachphoto/a1.png" />
-    <entry file="file://$PROJECT_DIR$/static/eachphoto/a0.png" />
-    <entry file="file://$PROJECT_DIR$/static/eachphoto/6d6ae7fa-72b8-4501-a135-c641e2df364c.png" />
     <entry file="file://$PROJECT_DIR$/static/eachphoto/cf95f2c8-5aac-4e96-9a1a-9753b0d49696.png" />
     <entry file="file://$PROJECT_DIR$/static/eachphoto/413d43be-732d-45d5-9ade-1d2a08716e58.png" />
     <entry file="file://$PROJECT_DIR$/static/nearface/0.6521463675081551.png" />
@@ -770,13 +797,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/netBackground/particles.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detect.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="201" column="46" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="46" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userimage.jpg" />
     <entry file="file://$PROJECT_DIR$/croped.jpg" />
@@ -828,27 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="134" column="99" selection-start-line="134" selection-start-column="99" selection-end-line="134" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="92" column="60" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" lean-forward="true" selection-start-line="19" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/nearface/26690751-865b-487b-b1c6-7fd38f54a70a.png" />
     <entry file="file://$PROJECT_DIR$/static/nearface/efea007a-f9ca-457f-a79e-85f6a1d60d76.png" />
     <entry file="file://$PROJECT_DIR$/static/nearface/f2a62464-5967-4af0-bd4f-3a568ffcd5d8.png" />
@@ -880,34 +879,81 @@
     <entry file="file://$PROJECT_DIR$/static/c7dc5e3666cd4310aba05aabb31b2059.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiclient.py">
+    <entry file="file://$PROJECT_DIR$/static/b5f4506d20524f2d8c949f148ee1a275.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base5.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#154#395#0" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/croplayout.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="201" column="33" selection-start-line="201" selection-start-column="31" selection-end-line="201" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="108" column="24" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="24" />
+        <state relative-caret-position="103">
+          <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
           <folding>
-            <marker date="1539320517529" expanded="true" signature="615:640" ph="..." />
+            <element signature="e#1873#2999#0" />
+            <element signature="e#3457#3660#0" />
+            <marker date="1539325145249" expanded="true" signature="619:645" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/b5f4506d20524f2d8c949f148ee1a275.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/apiclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/detect2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="389" column="101" selection-start-line="389" selection-start-column="101" selection-end-line="389" selection-end-column="101" />
+        <state relative-caret-position="284">
+          <caret line="706" column="71" selection-start-line="706" selection-start-column="71" selection-end-line="706" selection-end-column="71" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
@@ -931,17 +977,24 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#5;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#7;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#dialog#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#dialog#0;n#body#0;n#html#0;n#!!top" expanded="true" />
