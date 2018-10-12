@@ -122,7 +122,7 @@ body{
 .bs-wizard > .bs-wizard-step + .bs-wizard-step {}
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 16px; margin-bottom: 5px;}
 .bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background: #fbe8aa; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background:#fbe8aa ; ; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;}
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 14px; height: 14px; background: #fbbd19; border-radius: 50px; position: absolute; top: 8px; left: 8px; }
 .bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
 .bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #fbe8aa;}
@@ -136,6 +136,11 @@ body{
 .bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
 /*END Form Wizard*/
+
+
+
+
+
 
 
 
@@ -355,36 +360,54 @@ body{
 
     </div>
 
-    <div class="   w3-display-right" id="detecticons" style=" margin-right:100px;">
 
-        <label for="file-input" style="margin-top:70px;">
-            <img class="zoom" src="/static/icons/gallery.png" style="width:50px; height:50px; margin:10px;"
-                 onclick="hidegallery()"/>
+    <div class="   w3-display-right" id="detecticons" style=" margin-right:50px;">
+
+        <label for="file-input">
+            <div class="   w3-display-right" style=" visibility:;"
+                 onclick="hidegallery()">
+                <div class="w3-round-large w3-button w3-white"
+                     style="  width:300px ;padding-top:20px; margin-bottom:100px; ">
+                    <p class="" style=" display:inline; font-size:24px; font-weight:normal;  "> افزودن فایل موجود</p>
+                    <!--<img src="/static/icons/gallery.png" style=" display:inline;width:30px; height:30px;"/>-->
+
+                </div>
+            </div>
         </label>
-        <p>افزودن فایل موجود</p>
 
         <input id="file-input" type='file' accept='image/*' style="display: none;" onchange='openFile(event)'>
 
-        <img id="show" class="zoom js-open" src="/static/icons/camera.png"
-             style="width:50px; height:50px; margin:10px;"
-             onclick='hidecamera();'>
-        <p>افزودن عکس از دوربین</p>
-        <div style="visibility:hidden;" id="detectstep1">
-            <img class="zoom js-open" src="/static/icons/detect.png"
-                 style="width:50px; height:50px; margin:10px; "
-                 onclick='detect();'>
-            <p>برش تصویر</p>
+        <div class=" js-open  w3-display-right" style=" margin-top:60px; visibility:;"
+             onclick="hidecamera();">
+            <div class="w3-round-large w3-button w3-white"
+                 style="  width:300px ; padding-top:20px;  margin-bottom:70px;">
+                <p class="" style=" display:inline; font-size:24px; "> افزودن عکس از دوربین</p>
+                <!--<img src="/static/icons/camera.png"  style=" display:inline;width:30px; height:30px;"/>-->
 
+            </div>
         </div>
 
+        <div class="   w3-display-right" id="detectstep1" style=" margin-top:120px; visibility:hidden;"
+             onclick="detect();">
+            <div class="w3-round-large w3-button w3-white"
+                 style=" width:300px ; padding-top:20px; margin-bottom:40px;  ">
+                <p class="" style=" display:inline; font-size:24px; ">برش تصویر</p>
+                <!--<img src="/static/icons/crop.png"  style=" display:inline;width:30px; height:30px;"/>-->
+
+            </div>
+        </div>
+
+
     </div>
+
+
     <div class="   w3-display-right" id="detecticonsbtn"
-         style="margin-right:100px; font-size:24px;  visibility:hidden;">
+         style="margin-right:50px; font-size:24px;  visibility:hidden;">
         <div class="w3-round-large w3-button w3-white"
-             style=" padding:5px; "
+             style="  width:300px ; padding-top:20px;  margin-bottom:60px;"
              onclick="detect()">
             <img src="/static/icons/detect.png" style=" display:inline;width:40px; height:40px;"/>
-            <p style="display:inline;"> جست و جو</p>
+            <p style="display:inline; font-size:24px; "> جست و جو</p>
         </div>
     </div>
     <div class="   w3-display-right" id="startagain" style="margin-right:100px; visibility:hidden;"
@@ -482,11 +505,16 @@ function myFunction() {
 
 
 
+
+
+
+
+
         </script>
 
     </div>
     <div style="margin-left:400px; margin-top:50px; backgorund:red; visibility:hidden;" id="userimagediv">
-        <img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg">
+        <!--<img style="max-width:370px; min-width:300px;" src="/static/userimage.jpg">-->
     </div>
 
 
@@ -529,6 +557,11 @@ console.log("destory is being called");
 
 
     }
+
+
+
+
+
 
 
 
@@ -717,6 +750,11 @@ $.get("/getmethodrecognize", function(data) {
     document.getElementById("myInput").style.display= "none";
     $("#galleryholder").empty();
 
+    if(indexes.length==0){
+    console.log('no face detected');
+    indexes = [0,0,50,50];
+    }
+
 
 
 $("#allpeoplelist").empty();
@@ -783,6 +821,11 @@ for(var i in indexes) {
 
 
 
+
+
+
+
+
 </script>
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
@@ -799,7 +842,7 @@ function opencamera(){
         Webcam.snap( function(data_uri) {
             document.getElementById('croppr').src= data_uri;
             document.getElementById('cameraPhoto').src= data_uri;
-            callCropper();
+            <!--callCropper();-->
             document.getElementById("cameraPhoto").style.display= "block";
 
 
@@ -821,6 +864,11 @@ function opencamera(){
 });
         } );
     }
+
+
+
+
+
 
 
 
@@ -883,6 +931,11 @@ var indexes = {
 
 
   };
+
+
+
+
+
 
 
 
@@ -1067,6 +1120,11 @@ function startagain(){
 
 
 
+
+
+
+
+
 </script>
 <script>
     function callInserter(){
@@ -1117,6 +1175,11 @@ function startagain(){
 
 
 
+
+
+
+
+
 </script>
 <script>
   const dialog = document.querySelector('.js-dialog')
@@ -1133,9 +1196,15 @@ closeButton.addEventListener('click', () => {
   dialog.close();
       $("#cameraPhoto").empty();
   document.getElementById("cameraPhoto").style.display= "none";
+  callCropper();
 
 
 })
+
+
+
+
+
 
 
 

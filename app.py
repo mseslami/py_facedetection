@@ -86,7 +86,7 @@ def get_post_json():
         import urllib
         import uuid
         userimgname.userimagename = uuid.uuid4().hex
-        print(userimgname.userimagename)
+        print("image name : ",userimgname.userimagename)
         resource = urllib.request.urlopen(data["hi"])
         output = open("static/"+userimgname.userimagename+".jpg", "wb")
         output.write(resource.read())
