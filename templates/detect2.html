@@ -168,6 +168,7 @@ body{
 
 
 
+
     </style>
 
 </head>
@@ -192,27 +193,27 @@ body{
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse w3-display-middle" id="navbarResponsive">
-            <ul class="navbar-nav mx-auto" dir="rtl">
-                <li class="nav-item  px-lg-4 active">
+            <ul class="navbar-nav mx-auto" dir="rtl" style="list-style-type:none;">
+                <li class="nav-item  px-lg-4 active" style="float: right; padding: 16px;">
                     <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
                        onmouseout="this.style.color='black';" style="color:black;    " href="index">خانه
 
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item  px-lg-4">
+                <li class="nav-item  px-lg-4" style="float: right;padding: 16px;">
                     <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
                        onmouseout="this.style.color='black';" style="color:black;  " href="detect">پردازش
                         چهره</a>
                 </li>
-                <li class="nav-item px-lg-4">
+                <li class="nav-item px-lg-4" style="float: right;padding: 16px;">
                     <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
                        onmouseout="this.style.color='black';" style="color:black;    "
                        href="products">معرفی محصول</a>
                 </li>
-                <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" onmouseover="this.style.color='#6c757d';"
-                       onmouseout="this.style.color='black';" style="color:black;   " href="about">درباره
+                <li class="nav-item px-lg-4" style="float: right; padding: 16px;">
+                    <a class="nav-link text-uppercase text-expanded"  onmouseover="this.style.color='#6c757d';"
+                       onmouseout="this.style.color='black';"  style="color:black;   "  href="about">درباره
                         ما</a>
                 </li>
 
@@ -230,17 +231,17 @@ body{
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse w3-display-middle" id="">
-            <ul class="navbar-nav mx-auto" dir="rtl">
-                <li class="nav-item  px-lg-4" id="searchstep">
-                    <a class="nav-link text-uppercase text-expanded " onclick='showAllPeople()'>جست و جو
+            <ul class="navbar-nav mx-auto" dir="rtl"  style="list-style-type:none;">
+                <li class="nav-item  px-lg-4" id="searchstep" style="float: right; padding: 16px;">
+                    <a class="nav-link text-uppercase text-expanded " style="color:white;" onclick='showAllPeople()'>جست و جو
                         <span class="sr-only ">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active px-lg-4" id="detectstep">
-                    <a class="nav-link text-uppercase text-expanded" onclick="detectview();">پردازش چهره</a>
+                <li class="nav-item active px-lg-4" id="detectstep" style="float: right; padding: 16px;">
+                    <a class="nav-link text-uppercase text-expanded" style="color:white;" onclick="detectview();">پردازش چهره</a>
                 </li>
-                <li class="nav-item px-lg-4" id="insertstep">
-                    <a class="nav-link text-uppercase text-expanded" onclick="insertview();">افزودن چهره</a>
+                <li class="nav-item px-lg-4" id="insertstep" style="float: right; padding: 16px;">
+                    <a class="nav-link text-uppercase text-expanded" style="color:white;" onclick="insertview();">افزودن چهره</a>
 
             </ul>
         </div>
@@ -479,14 +480,16 @@ function myFunction() {
 
 
 
+
         </script>
 
     </div>
     <div id="search view2" class="w3-container w3-card"
          style=" background-color:rgba(255,211,181,,0.7); width:330px; height:450px; margin-left:30px; margin-top:20px;  position: absolute; right:300px; visibility:hidden;">
 
-        <div class="w3-round-large  w3-white"  style="margin-top:10px;width:300px ; height:50px; margin-bottom:20px;     text-align: center; padding-top:15px;">
-            <p id="showfacename"> </p>
+        <div class="w3-round-large  w3-white"
+             style="margin-top:10px;width:300px ; height:50px; margin-bottom:20px;     text-align: center; padding-top:15px;">
+            <p id="showfacename"></p>
         </div>
 
 
@@ -544,6 +547,7 @@ console.log("destory is being called");
 
 
     }
+
 
 
 
@@ -818,6 +822,7 @@ for(var i in indexes) {
 
 
 
+
 </script>
 <!--webcam access-->
 <!--https://github.com/jhuckaby/webcamjs-->
@@ -886,6 +891,7 @@ function opencamera(){
 
 
 
+
 </script>
 <script language="Javascript">
 
@@ -924,6 +930,7 @@ var indexes = {
 
 
   };
+
 
 
 
@@ -1120,6 +1127,7 @@ function startagain(){
 
 
 
+
 </script>
 <script>
     function callInserter(){
@@ -1176,6 +1184,7 @@ function startagain(){
 
 
 
+
 </script>
 <script>
   const dialog = document.querySelector('.js-dialog')
@@ -1196,6 +1205,7 @@ closeButton.addEventListener('click', () => {
 
 
 })
+
 
 
 
